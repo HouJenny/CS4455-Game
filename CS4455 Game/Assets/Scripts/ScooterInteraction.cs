@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ScooterInteraction : MonoBehaviour
 {
-    public GameObject cat;
+   public GameObject cat;
     public GameObject scooter;
     public ScooterController scooterController;
     public CatController catController;
