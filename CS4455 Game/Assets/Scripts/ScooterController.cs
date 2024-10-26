@@ -8,7 +8,16 @@ public class ScooterController : MonoBehaviour
 {
     public float speed = 10f; // Movement speed
     public float turnSpeed = 100f; // Turning speed
+    public Vector3 newCenterOfMass; 
 
+    private Rigidbody rb;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+
+        rb.centerOfMass = newCenterOfMass;
+    }
     void Update()
     {
         // Get input for movement and turning
