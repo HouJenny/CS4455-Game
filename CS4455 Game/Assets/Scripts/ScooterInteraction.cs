@@ -19,12 +19,14 @@ public class ScooterInteraction : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        Debug.Log("collision");
         if (other.gameObject == cat) {
             isNearScooter = true;
         }
     }
 
     void OnTriggerExit(Collider other) {
+        Debug.Log("collision exit");
         if (other.gameObject == cat) {
             isNearScooter = false;
         }

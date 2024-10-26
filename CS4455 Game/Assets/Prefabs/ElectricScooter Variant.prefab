@@ -20,7 +20,7 @@ PrefabInstance:
     - target: {fileID: 2781649278663893827, guid: 9f5a4449b60ef444892d8ddd9b2e2ee5,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4700524887866416556, guid: 9f5a4449b60ef444892d8ddd9b2e2ee5,
         type: 3}
@@ -30,7 +30,7 @@ PrefabInstance:
     - target: {fileID: 6233120077717777477, guid: 9f5a4449b60ef444892d8ddd9b2e2ee5,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8602094794539265983, guid: 9f5a4449b60ef444892d8ddd9b2e2ee5,
         type: 3}
@@ -105,7 +105,7 @@ PrefabInstance:
     - target: {fileID: 9169333061017452196, guid: 9f5a4449b60ef444892d8ddd9b2e2ee5,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5a4449b60ef444892d8ddd9b2e2ee5, type: 3}
