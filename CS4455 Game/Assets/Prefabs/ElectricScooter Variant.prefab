@@ -131,7 +131,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &346069566274281645
+--- !u!114 &736714004
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,14 +140,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1947206873028514902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32006ebcc36d14d73992b36184befd04, type: 3}
+  m_Script: {fileID: 11500000, guid: d2739a25d381d194790af4dda46f6e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cat: {fileID: 0}
-  scooter: {fileID: 0}
-  scooterController: {fileID: 0}
+  cat: {fileID: 8823924229911132731, guid: 522eb0b7550344ebbad3564eb5787bdd, type: 3}
+  scooter: {fileID: 1947206873028514902}
+  scooterController: {fileID: 736714005}
   catController: {fileID: 0}
---- !u!114 &3738609742193219143
+--- !u!114 &736714005
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -156,8 +156,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1947206873028514902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3943560efbbcd47ef8a12c8c3ca0abdb, type: 3}
+  m_Script: {fileID: 11500000, guid: c3aaf8c7a958a5e489a95b182f14b28f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 5
   turnSpeed: 100
