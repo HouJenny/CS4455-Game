@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalScene.unity
     guid: 02f640c18e6404fdb8cc2c45f245064a
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/TechGreen.unity
+    guid: 7b7fa8cf30af241b599764d6a4194a3c
   m_configObjects: {}
