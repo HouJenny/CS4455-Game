@@ -7,7 +7,7 @@ public class ScooterInteraction : MonoBehaviour
     public GameObject cat;
     public GameObject scooter;
     public ScooterController scooterController;
-    public CatController catController;
+    public CharacterInputController catController;
     private bool isNearScooter = false;
     private bool isOnScooter = false;
 
@@ -40,7 +40,7 @@ public class ScooterInteraction : MonoBehaviour
             catController.enabled = false;
             isOnScooter = true;
             cat.transform.SetParent(scooter.transform);
-            cat.transform.localPosition = new Vector3(-.3f, .7f, 0);
+            cat.transform.localPosition = new Vector3(-.1f, .2f, 0f);
             Rigidbody catRigidbody = cat.GetComponent<Rigidbody>();
             if (catRigidbody != null)
             {
