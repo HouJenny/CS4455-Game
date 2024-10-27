@@ -16,7 +16,7 @@ public class CatController : MonoBehaviour
  // Speed at which the player moves.
  public float speed = 0; 
  public float terminalVelocity = 20f;
-
+    private float speedBoostDuration = 5.0f;
  // Start is called before the first frame update.
  void Start()
     {
@@ -59,5 +59,21 @@ public class CatController : MonoBehaviour
              rb.velocity = velocity.normalized * terminalVelocity;
          }
      }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("SpeedPotion"))
+        {
+            StartCoroutine(SpeedBoost());
+
+        }
+    }
+    IEnumerator SpeedBoost()
+    {
+        // Temporarily increase speed.
+        speed *= 1.5f;
+        yield return new WaitForSeconds(speedBoostDuration);
+        // Revert to normal speed after boost duration.
+        speed /= 1.5f;
+    }
 
 }
