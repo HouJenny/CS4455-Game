@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ScooterInteraction : MonoBehaviour
 {
-   public GameObject cat;
+    public GameObject cat;
     public GameObject scooter;
     public ScooterController scooterController;
     public CatController catController;
@@ -19,6 +19,7 @@ public class ScooterInteraction : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Collision");
         if (other.gameObject == cat) {
             isNearScooter = true;
         }
