@@ -109,8 +109,8 @@ GameObject:
   - component: {fileID: 5695661764193438719}
   - component: {fileID: 5695661764193438712}
   - component: {fileID: 5695661764193438713}
-  - component: {fileID: 4463327140419673693}
   - component: {fileID: 3703813243290620775}
+  - component: {fileID: 4528006626356757897}
   m_Layer: 0
   m_Name: ColletableT
   m_TagString: Untagged
@@ -197,18 +197,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4463327140419673693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5695661764193438714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c1140e8a5f574c42a74cee1f0c1fd2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3703813243290620775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,3 +210,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: {x: 0, y: 50, z: 0}
+--- !u!114 &4528006626356757897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5695661764193438714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf566948fb9b43699aa1da9c0fa67b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
