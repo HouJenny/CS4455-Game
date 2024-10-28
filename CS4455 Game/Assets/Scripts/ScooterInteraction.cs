@@ -41,6 +41,7 @@ public class ScooterInteraction : MonoBehaviour
             isOnScooter = true;
             cat.transform.SetParent(scooter.transform);
             cat.transform.localPosition = new Vector3(-.1f, .2f, 0f);
+            cat.transform.localRotation = Quaternion.Euler(0,90,0);
             Rigidbody catRigidbody = cat.GetComponent<Rigidbody>();
             if (catRigidbody != null)
             {
