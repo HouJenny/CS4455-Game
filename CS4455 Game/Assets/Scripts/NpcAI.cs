@@ -45,10 +45,10 @@ public class NpcAI : MonoBehaviour
             case AIState.WalkingAround:
                 nav_mesh_agent.isStopped = false;
                 cat_offset = (transform.position - cat.transform.position).magnitude; 
-                // if (Input.GetKeyDown(KeyCode.F) && cat_offset <= 5) {
+                // if (Input.GetKeyDown(KeyCode.R) && cat_offset <= 5) {
                 //     ai_state = AIState.CatPetting;
                 // }
-                if (Input.GetKeyDown(KeyCode.Q) && cat_offset <= 5) {
+                if (Input.GetKeyDown(KeyCode.Z) && cat_offset <= 5) {
                     ai_state = AIState.Attacked;
                 }
                 if ((nav_mesh_agent.pathPending == false) && (nav_mesh_agent.remainingDistance <= 0.5)) {
