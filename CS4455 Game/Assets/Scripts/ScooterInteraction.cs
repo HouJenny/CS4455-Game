@@ -42,8 +42,9 @@ public class ScooterInteraction : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.F)) {
         // Mount the scooter
-        if (isNearScooter && !isOnScooter && Input.GetKeyDown(KeyCode.F))
+        if (isNearScooter && !isOnScooter)
         {
             scooterController.enabled = true;
             rootMotionControl.enabled = false; // Disable root motion control
@@ -65,11 +66,7 @@ public class ScooterInteraction : MonoBehaviour
             {
                 catRigidbody.isKinematic = true;
             }
-        }
-
-        // Dismount the scooter
-        if (isOnScooter && Input.GetKey(KeyCode.Escape))
-        {
+        } else {
             scooterController.enabled = false;
             rootMotionControl.enabled = true; // Re-enable root motion control
             isOnScooter = false;
@@ -83,6 +80,7 @@ public class ScooterInteraction : MonoBehaviour
             {
                 catRigidbody.isKinematic = false;
             }
+        }
         }
     }
     
