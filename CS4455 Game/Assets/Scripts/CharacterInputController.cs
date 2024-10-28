@@ -22,13 +22,13 @@ public class CharacterInputController : MonoBehaviour {
     public float Forward
     {
         get;
-        private set;
+        set;
     }
 
     public float Turn
     {
         get;
-        private set;
+        set;
     }
 
     public bool Action
