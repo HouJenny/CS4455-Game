@@ -9133,6 +9133,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1840357859 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7500335161439915073, guid: d4e922f2696dc0f4b9d3c3040126929c,
+    type: 3}
+  m_PrefabInstance: {fileID: 144162340}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1849713860
 GameObject:
   m_ObjectHideFlags: 0
@@ -10271,6 +10277,11 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4357478362638322889, guid: db1346aaf74206747b499bd784dc6de1,
+        type: 3}
+      propertyPath: scooterObject
+      value: 
+      objectReference: {fileID: 1840357859}
     - target: {fileID: 4357478362638322889, guid: db1346aaf74206747b499bd784dc6de1,
         type: 3}
       propertyPath: animationSpeed
