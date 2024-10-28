@@ -55,8 +55,11 @@ public class ScooterInteraction : MonoBehaviour
             // Parent the cat to the scooter and set position
             cat.transform.SetParent(scooter.transform);
             cat.transform.localPosition = new Vector3(-.1f, .2f, 0f);
-            
+            cat.transform.localRotation = Quaternion.Euler(0,90,0);
             // Make the cat's Rigidbody kinematic to stop physics interactions
+
+            
+
             Rigidbody catRigidbody = cat.GetComponent<Rigidbody>();
             if (catRigidbody != null)
             {
