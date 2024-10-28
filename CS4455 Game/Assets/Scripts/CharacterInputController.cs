@@ -18,6 +18,8 @@ public class CharacterInputController : MonoBehaviour {
     
     private AudioSource buttonPressAudio;   // AudioSource for keyboard button press
 
+    public float terminalVelocity = 20f;
+
 
     public float Forward
     {
@@ -43,11 +45,15 @@ public class CharacterInputController : MonoBehaviour {
         private set;
     }
 
-    void Start()
+    public bool Attack
+    {
+        get;
+        private set;
+    }
+  void Start()
     {
         buttonPressAudio = GetComponents<AudioSource>()[0];
     }
-
 	void Update () {
 		
         //GetAxisRaw() so we can do filtering here instead of the InputManager
@@ -111,6 +117,8 @@ public class CharacterInputController : MonoBehaviour {
         Action = Input.GetButtonDown("Fire1");
 
         Jump = Input.GetButtonDown("Jump");
+
+        Attack = Input.GetKeyDown(KeyCode.Space);
 
 	}
 }
