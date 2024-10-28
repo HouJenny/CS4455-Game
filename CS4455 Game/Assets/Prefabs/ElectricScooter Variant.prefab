@@ -474,10 +474,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2739a25d381d194790af4dda46f6e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cat: {fileID: 0}
+  cat: {fileID: 3511038225865978246, guid: db1346aaf74206747b499bd784dc6de1, type: 3}
   scooter: {fileID: 7500335161439915073}
   scooterController: {fileID: 8292065085053371650}
-  catController: {fileID: 0}
+  catController: {fileID: 4357478362638322894, guid: db1346aaf74206747b499bd784dc6de1,
+    type: 3}
+  rootMotionControl: {fileID: 4357478362638322889, guid: db1346aaf74206747b499bd784dc6de1,
+    type: 3}
 --- !u!114 &8292065085053371650
 MonoBehaviour:
   m_ObjectHideFlags: 0
