@@ -15,18 +15,22 @@ public class CharacterInputController : MonoBehaviour {
     public float turnInputFilter = 5f;
 
     private float forwardSpeedLimit = 1f;
+    
+    private AudioSource buttonPressAudio;   // AudioSource for keyboard button press
+
+    public float terminalVelocity = 20f;
 
 
     public float Forward
     {
         get;
-        private set;
+        set;
     }
 
     public float Turn
     {
         get;
-        private set;
+        set;
     }
 
     public bool Action
@@ -41,8 +45,15 @@ public class CharacterInputController : MonoBehaviour {
         private set;
     }
 
-        
-
+    public bool Attack
+    {
+        get;
+        private set;
+    }
+  void Start()
+    {
+        buttonPressAudio = GetComponents<AudioSource>()[0];
+    }
 	void Update () {
 		
         //GetAxisRaw() so we can do filtering here instead of the InputManager
@@ -65,6 +76,8 @@ public class CharacterInputController : MonoBehaviour {
             h = -0.5f;
         else if (Input.GetKey(KeyCode.E))
             h = 0.5f;
+        else if (Input.GetKey(KeyCode.M))
+            buttonPressAudio.Play();
 
         if (Input.GetKeyUp(KeyCode.Alpha1))
             forwardSpeedLimit = 0.1f;
@@ -104,6 +117,8 @@ public class CharacterInputController : MonoBehaviour {
         Action = Input.GetButtonDown("Fire1");
 
         Jump = Input.GetButtonDown("Jump");
+
+        Attack = Input.GetKeyDown(KeyCode.Space);
 
 	}
 }
