@@ -5,7 +5,7 @@ public class GameMenu : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("FinalScene");
+        SceneManager.LoadScene("TechGreen");
     }
     public void QuitGame()
     {
