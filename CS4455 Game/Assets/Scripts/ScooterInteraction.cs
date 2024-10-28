@@ -43,7 +43,7 @@ public class ScooterInteraction : MonoBehaviour
     void Update()
     {
         // Mount the scooter
-        if (isNearScooter && !isOnScooter && Input.GetKeyDown(KeyCode.E))
+        if (isNearScooter && !isOnScooter && Input.GetKeyDown(KeyCode.F))
         {
             scooterController.enabled = true;
             rootMotionControl.enabled = false; // Disable root motion control
