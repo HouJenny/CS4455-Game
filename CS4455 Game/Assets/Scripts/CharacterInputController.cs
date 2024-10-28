@@ -16,6 +16,8 @@ public class CharacterInputController : MonoBehaviour {
 
     private float forwardSpeedLimit = 1f;
 
+    public float terminalVelocity = 20f;
+
 
     public float Forward
     {
@@ -36,6 +38,12 @@ public class CharacterInputController : MonoBehaviour {
     }
 
     public bool Jump
+    {
+        get;
+        private set;
+    }
+
+    public bool Attack
     {
         get;
         private set;
@@ -104,6 +112,8 @@ public class CharacterInputController : MonoBehaviour {
         Action = Input.GetButtonDown("Fire1");
 
         Jump = Input.GetButtonDown("Jump");
+
+        Attack = Input.GetKeyDown(KeyCode.Space);
 
 	}
 }
