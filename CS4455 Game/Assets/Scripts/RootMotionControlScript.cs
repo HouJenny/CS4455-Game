@@ -192,18 +192,6 @@ public class RootMotionControlScript : MonoBehaviour
         }
     }
 
-    private IEnumerator SpeedBoostRoutine(float duration)
-    {
-        speedBoostActive = true;
-        rootMovementSpeed *= speedMultiplier;  
-        Debug.Log("Speed boost activated!");
-
-        yield return new WaitForSeconds(duration);  
-
-        rootMovementSpeed = originalMovementSpeed;  
-        speedBoostActive = false;
-        Debug.Log("Speed boost deactivated.");
-    }
     private void LimitVelocity() {
         Vector3 velocity = rbody.velocity;
         if (velocity.magnitude > cinput.terminalVelocity) {
@@ -236,16 +224,6 @@ public class RootMotionControlScript : MonoBehaviour
                 anim.SetLookAtWeight(0); 
             } 
         } 
-    }
-
-
-    // activate speed boost
-    public void ActivateSpeedBoost(float duration)
-    {
-        if (!speedBoostActive)  
-        {
-            StartCoroutine(SpeedBoostRoutine(duration));
-        }
     }
 
     private IEnumerator SpeedBoostRoutine(float duration)
