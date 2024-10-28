@@ -1,10 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
 
 [RequireComponent(typeof(Animator), typeof(Rigidbody), typeof(CharacterInputController))]
 public class RootMotionControlScript : MonoBehaviour
@@ -17,6 +12,10 @@ public class RootMotionControlScript : MonoBehaviour
     public float rootTurnSpeed = 1f;
 
     private AudioSource movementAudio;      // AudioSource for cat movement
+    private float originalMovementSpeed;  // Original Moving Speed
+    private float speedMultiplier = 2f;   // Speed Multiplier
+    private bool speedBoostActive = false;  // Check if in the speedup mode
+    private float originalTurnSpeed;
 
     void Awake()
     {
@@ -27,6 +26,9 @@ public class RootMotionControlScript : MonoBehaviour
         // Get the two AudioSource components attached to the cat
         AudioSource[] audioSources = GetComponents<AudioSource>();
         movementAudio = audioSources[2];
+        originalMovementSpeed = rootMovementSpeed; // Keep Original Speed
+        originalTurnSpeed = rootTurnSpeed;
+
     }
 
     void FixedUpdate()
@@ -71,5 +73,29 @@ public class RootMotionControlScript : MonoBehaviour
                 movementAudio.Stop();
             }
         }
+    }
+
+    // activate speed boost
+    public void ActivateSpeedBoost(float duration)
+    {
+        if (!speedBoostActive)  
+        {
+            StartCoroutine(SpeedBoostRoutine(duration));
+        }
+    }
+
+    private IEnumerator SpeedBoostRoutine(float duration)
+    {
+        speedBoostActive = true;
+        rootMovementSpeed *= speedMultiplier;
+        rootTurnSpeed *= speedMultiplier;
+        Debug.Log("Speed boost activated!");
+
+        yield return new WaitForSeconds(duration);  
+
+        rootMovementSpeed = originalMovementSpeed;
+        rootTurnSpeed = originalTurnSpeed;
+        speedBoostActive = false;
+        Debug.Log("Speed boost deactivated.");
     }
 }

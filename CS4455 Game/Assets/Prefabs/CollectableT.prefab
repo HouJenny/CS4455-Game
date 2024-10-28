@@ -110,10 +110,10 @@ GameObject:
   - component: {fileID: 5695661764193438712}
   - component: {fileID: 5695661764193438713}
   - component: {fileID: 3703813243290620775}
-  - component: {fileID: 4528006626356757897}
+  - component: {fileID: 7043763696622167706}
   m_Layer: 0
-  m_Name: ColletableT
-  m_TagString: Untagged
+  m_Name: CollectableT
+  m_TagString: T
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: {x: 0, y: 50, z: 0}
---- !u!114 &4528006626356757897
+--- !u!114 &7043763696622167706
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

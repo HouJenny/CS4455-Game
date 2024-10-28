@@ -21,6 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Chase.unity
     guid: 32e0c446f1e284a6aba9790690f2eda5
   - enabled: 1
-    path: Assets/Scenes/Game Scenes/TechGreen.unity
+    path: Assets/Scenes/TechGreen.unity
     guid: 7b7fa8cf30af241b599764d6a4194a3c
   m_configObjects: {}
