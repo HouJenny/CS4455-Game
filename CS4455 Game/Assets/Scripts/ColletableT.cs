@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class ColletableT : MonoBehaviour
 {
+    private TCounterUI tCounter;
+    void Start()
+    {
+        // Find the TIconCounterUI script in the scene
+        tCounter = FindObjectOfType<TCounterUI>();
+    }
     void OnTriggerEnter(Collider c)
     {
         if (c.CompareTag("Player"))
         {
+        
             
             // 销毁当前的 T
             Destroy(gameObject);

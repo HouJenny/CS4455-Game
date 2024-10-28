@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cb47c369ff6304b9c8223ac155abab72, type: 2}
+  - {fileID: 2100000, guid: bbf19f4ded1f24111b624edf1f02a6fa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 5216331799151062499}
   - component: {fileID: 3862469953963109692}
   - component: {fileID: 1192157708436554969}
-  - component: {fileID: -2911056756109376038}
+  - component: {fileID: 5432309782207692291}
   m_Layer: 0
   m_Name: BluePotion
   m_TagString: Untagged
@@ -297,7 +297,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-2911056756109376038
+--- !u!114 &5432309782207692291
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
