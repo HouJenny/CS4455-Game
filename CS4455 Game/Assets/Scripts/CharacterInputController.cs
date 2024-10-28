@@ -15,6 +15,8 @@ public class CharacterInputController : MonoBehaviour {
     public float turnInputFilter = 5f;
 
     private float forwardSpeedLimit = 1f;
+    
+    private AudioSource buttonPressAudio;   // AudioSource for keyboard button press
 
 
     public float Forward
@@ -41,7 +43,10 @@ public class CharacterInputController : MonoBehaviour {
         private set;
     }
 
-        
+    void Start()
+    {
+        buttonPressAudio = GetComponents<AudioSource>()[0];
+    }
 
 	void Update () {
 		
@@ -65,6 +70,8 @@ public class CharacterInputController : MonoBehaviour {
             h = -0.5f;
         else if (Input.GetKey(KeyCode.E))
             h = 0.5f;
+        else if (Input.GetKey(KeyCode.M))
+            buttonPressAudio.Play();
 
         if (Input.GetKeyUp(KeyCode.Alpha1))
             forwardSpeedLimit = 0.1f;
