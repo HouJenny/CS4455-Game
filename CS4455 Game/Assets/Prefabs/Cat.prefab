@@ -221,7 +221,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3511038225865978246}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 4c906904d7ee0c147bff367910b4140f, type: 3}
+  m_Avatar: {fileID: 9000000, guid: b9c94b5eccf6a3a44bc4d5ceae58778f, type: 3}
   m_Controller: {fileID: 9100000, guid: d628bb95f49322947bd64618c8818509, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 1
@@ -262,7 +262,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 3669258589346456565, guid: 4c906904d7ee0c147bff367910b4140f, type: 3}
+  m_Mesh: {fileID: 3669258589346456565, guid: b9c94b5eccf6a3a44bc4d5ceae58778f, type: 3}
 --- !u!65 &4357478362638322895
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -288,8 +288,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aa5e1a5d2532364fb199a9e7a94e334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scooterPressStandingSpot: {fileID: 0}
+  scooterCloseEnoughForMatchDistance: 2
+  scooterCloseEnoughForPressDistance: 0.22
+  scooterCloseEnoughForPressAngleDegrees: 5
+  initalMatchTargetsAnimTime: 0.25
+  exitMatchTargetsAnimTime: 0.75
+  jumpableGroundNormalMaxAngle: 45
+  closeToJumpableGround: 0
+  animationSpeed: 1
   rootMovementSpeed: 10
   rootTurnSpeed: 10
+  scooterObject: {fileID: 0}
 --- !u!114 &4357478362638322894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,6 +316,7 @@ MonoBehaviour:
   InputMapToCircular: 1
   forwardInputFilter: 10
   turnInputFilter: 10
+  terminalVelocity: 20
 --- !u!114 &1121878214097022978
 MonoBehaviour:
   m_ObjectHideFlags: 0
