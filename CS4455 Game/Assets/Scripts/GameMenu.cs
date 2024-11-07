@@ -6,6 +6,7 @@ public class GameMenu : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("TechGreen");
+        
     }
     public void QuitGame()
     {

@@ -44,7 +44,7 @@ public class RootMotionControlScript : MonoBehaviour
         // Get the two AudioSource components attached to the cat
         AudioSource[] audioSources = GetComponents<AudioSource>();
         movementAudio = audioSources[2];
-        originalMovementSpeed = rootMovementSpeed; // Keep Original Speed
+        originalMovementSpeed = animationSpeed; // Keep Original Speed
     }
 
     private void Update()
@@ -237,14 +237,12 @@ public class RootMotionControlScript : MonoBehaviour
     private IEnumerator SpeedBoostRoutine(float duration)
     {
         speedBoostActive = true;
-        rootMovementSpeed *= speedMultiplier;
-        rootTurnSpeed *= speedMultiplier;
+        animationSpeed *= speedMultiplier;
         Debug.Log("Speed boost activated!");
 
-        yield return new WaitForSeconds(duration);  
+        yield return new WaitForSeconds(duration);
 
-        rootMovementSpeed = originalMovementSpeed;
-        rootTurnSpeed = originalTurnSpeed;
+        animationSpeed = originalMovementSpeed;
         speedBoostActive = false;
         Debug.Log("Speed boost deactivated.");
     }
