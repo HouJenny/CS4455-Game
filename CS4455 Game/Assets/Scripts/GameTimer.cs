@@ -62,4 +62,8 @@ public class GameTimer : MonoBehaviour
         Time.timeScale = 1; 
         SceneManager.LoadScene("StartMenu"); 
     }
+    public void AddTime(float timeToAdd)
+    {
+        timer += timeToAdd;
+    }
 }
