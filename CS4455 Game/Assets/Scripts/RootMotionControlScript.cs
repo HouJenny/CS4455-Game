@@ -15,6 +15,7 @@ public class RootMotionControlScript : MonoBehaviour
     public float initalMatchTargetsAnimTime = 0.25f;
     public float exitMatchTargetsAnimTime = 0.75f;
 
+	public bool catIdle = false;
     bool _inputActionFired = false;
     private bool isAttacking = false;
 
@@ -78,6 +79,13 @@ public class RootMotionControlScript : MonoBehaviour
         // Check if the cat is moving forward
         bool isMovingForward = cinput.Forward > 0.1f;
 
+		if (catIdle) {
+			anim.SetBool("isForward", false);
+		}
+		else {
+			anim.SetBool("isForward", isMovingForward);
+		}
+
         // Ground checking (assuming you're using a ground-checking method)
         bool isGrounded = true; // Replace with actual ground check
 
@@ -97,7 +105,7 @@ public class RootMotionControlScript : MonoBehaviour
 
         // Play the movement sound if moving forward
         if (isMovingForward && isGrounded)
-        {
+        {            
             if (!movementAudio.isPlaying)
             {
                 movementAudio.Play();
