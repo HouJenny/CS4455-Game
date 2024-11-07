@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ScooterInteraction : MonoBehaviour
 {
+	public Animator anim;
     public GameObject cat;
     public GameObject scooter;
     public ScooterController scooterController;
@@ -42,6 +43,11 @@ public class ScooterInteraction : MonoBehaviour
 
     void Update()
     {
+        if (isOnScooter) {
+			anim.SetBool("isForward", false);
+			
+
+		}
         if (Input.GetKeyDown(KeyCode.F)) {
         // Mount the scooter
         if (isNearScooter && !isOnScooter)
