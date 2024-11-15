@@ -13,7 +13,7 @@ public class TCounterUIScript : MonoBehaviour
 
     public void CollectT()
     {
-        tCount++;
+        
         UpdateCounterText();
     }
 
