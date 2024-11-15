@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ScooterInteraction : MonoBehaviour
 {
-	public Animator anim;
     public GameObject cat;
     public GameObject scooter;
     public ScooterController scooterController;
@@ -12,9 +11,13 @@ public class ScooterInteraction : MonoBehaviour
     public RootMotionControlScript rootMotionControl; // Reference to RootMotionControlScript
     
     private Animator catAnimator;   
-
     private bool isNearScooter = false;
     private bool isOnScooter = false;
+
+    // Battery system
+    public float maxBattery = 100f;
+    public float currentBattery;
+    public float batteryDrainRate = 10f; // Battery drain per second when scooter is active
 
     void Start()
     {
@@ -23,6 +26,7 @@ public class ScooterInteraction : MonoBehaviour
         rootMotionControl.enabled = true;
         
         catAnimator = cat.GetComponent<Animator>();
+        currentBattery = maxBattery;
     }
 
     void OnTriggerEnter(Collider other)
@@ -43,50 +47,76 @@ public class ScooterInteraction : MonoBehaviour
 
     void Update()
     {
-        if (isOnScooter) {
-			anim.SetBool("isForward", false);
-			
-
-		}
-        if (Input.GetKeyDown(KeyCode.F)) {
-        // Mount the scooter
-        if (isNearScooter && !isOnScooter)
+        if (isOnScooter)
         {
-            scooterController.enabled = true;
-            rootMotionControl.enabled = false; // Disable root motion control
-            isOnScooter = true;
-            
-            // Stop the cat's movement and switch to idle animation
-            StopCatMovement();
+            DrainBattery();
+        }
 
-            // Parent the cat to the scooter and set position
-            cat.transform.SetParent(scooter.transform);
-            cat.transform.localPosition = new Vector3(-.1f, .2f, 0f);
-            cat.transform.localRotation = Quaternion.Euler(0,90,0);
-            // Make the cat's Rigidbody kinematic to stop physics interactions
-
-            
-
-            Rigidbody catRigidbody = cat.GetComponent<Rigidbody>();
-            if (catRigidbody != null)
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            // Mount the scooter
+            if (isNearScooter && !isOnScooter)
             {
-                catRigidbody.isKinematic = true;
+                MountScooter();
             }
-        } else {
-            scooterController.enabled = false;
-            rootMotionControl.enabled = true; // Re-enable root motion control
-            isOnScooter = false;
-
-            // Unparent the cat from the scooter
-            cat.transform.SetParent(null);
-
-            // Re-enable physics for the cat's Rigidbody
-            Rigidbody catRigidbody = cat.GetComponent<Rigidbody>();
-            if (catRigidbody != null)
+            else if (isOnScooter)
             {
-                catRigidbody.isKinematic = false;
+                DismountScooter();
             }
         }
+
+        // Automatically dismount when battery is empty
+        if (isOnScooter && currentBattery <= 0)
+        {
+            DismountScooter();
+        }
+    }
+
+    private void MountScooter()
+    {
+        scooterController.enabled = true;
+        rootMotionControl.enabled = false; // Disable root motion control
+        isOnScooter = true;
+        
+        // Stop the cat's movement and switch to idle animation
+        StopCatMovement();
+
+        // Parent the cat to the scooter and set position
+        cat.transform.SetParent(scooter.transform);
+        cat.transform.localPosition = new Vector3(-.1f, .2f, 0f);
+        cat.transform.localRotation = Quaternion.Euler(0, 90, 0);
+
+        // Make the cat's Rigidbody kinematic to stop physics interactions
+        Rigidbody catRigidbody = cat.GetComponent<Rigidbody>();
+        if (catRigidbody != null)
+        {
+            catRigidbody.isKinematic = true;
+        }
+    }
+
+    private void DismountScooter()
+    {
+        scooterController.enabled = false;
+        rootMotionControl.enabled = true; // Re-enable root motion control
+        isOnScooter = false;
+
+        // Unparent the cat from the scooter
+        cat.transform.SetParent(null);
+
+        // Re-enable physics for the cat's Rigidbody
+        Rigidbody catRigidbody = cat.GetComponent<Rigidbody>();
+        if (catRigidbody != null)
+        {
+            catRigidbody.isKinematic = false;
+        }
+    }
+
+    private void DrainBattery()
+    {
+        if (currentBattery > 0)
+        {
+            currentBattery -= batteryDrainRate * Time.deltaTime;
+            currentBattery = Mathf.Clamp(currentBattery, 0, maxBattery);
         }
     }
     

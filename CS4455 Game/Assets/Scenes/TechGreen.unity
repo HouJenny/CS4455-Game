@@ -1755,7 +1755,12 @@ PrefabInstance:
     - target: {fileID: 8292065085053371649, guid: d4e922f2696dc0f4b9d3c3040126929c,
         type: 3}
       propertyPath: m_Constraints
-      value: 64
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 8292065085053371650, guid: d4e922f2696dc0f4b9d3c3040126929c,
+        type: 3}
+      propertyPath: speed
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8292065085053371651, guid: d4e922f2696dc0f4b9d3c3040126929c,
         type: 3}
@@ -1767,6 +1772,16 @@ PrefabInstance:
       propertyPath: catController
       value: 
       objectReference: {fileID: 1442597964}
+    - target: {fileID: 8292065085053371651, guid: d4e922f2696dc0f4b9d3c3040126929c,
+        type: 3}
+      propertyPath: currentBattery
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8292065085053371651, guid: d4e922f2696dc0f4b9d3c3040126929c,
+        type: 3}
+      propertyPath: batteryDrainRate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8292065085053371651, guid: d4e922f2696dc0f4b9d3c3040126929c,
         type: 3}
       propertyPath: rootMotionControl
@@ -4096,7 +4111,7 @@ PrefabInstance:
     - target: {fileID: 510766132238067234, guid: 018a9422ba4d443e58a86c73ab8ca9b0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 60
+      value: 61
       objectReference: {fileID: 0}
     - target: {fileID: 510766132238067234, guid: 018a9422ba4d443e58a86c73ab8ca9b0,
         type: 3}
@@ -6246,7 +6261,7 @@ Transform:
   - {fileID: 785587530}
   - {fileID: 1212279823}
   m_Father: {fileID: 0}
-  m_RootOrder: 61
+  m_RootOrder: 60
   m_LocalEulerAnglesHint: {x: 0, y: 85.4, z: 0}
 --- !u!1001 &711164362
 PrefabInstance:
@@ -15637,7 +15652,7 @@ PrefabInstance:
     - target: {fileID: 4357478362638322901, guid: db1346aaf74206747b499bd784dc6de1,
         type: 3}
       propertyPath: m_Constraints
-      value: 80
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 4357478362638322901, guid: db1346aaf74206747b499bd784dc6de1,
         type: 3}
