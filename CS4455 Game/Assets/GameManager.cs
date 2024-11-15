@@ -23,22 +23,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        UpdateCollectiblesUI(); // Initialize the UI with the starting value.
-    }
 
-    // Call this method when a collectible is picked up.
-    public void AddCollectible()
-    {
-        collectibleCount++;
-        UpdateCollectiblesUI();
-    }
 
     // Update the UI text element with the latest count.
-    private void UpdateCollectiblesUI()
+    public void UpdateCollectiblesUI()
     {
-        heistCount -= collectibleCount;
+        heistCount--; 
+        collectibleCount++;
+        Debug.Log(heistCount);
         collectiblesText.text = $"T's Stolen: {collectibleCount}" +
             $"         Heists Remaining: {heistCount}";
     }

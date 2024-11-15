@@ -6,14 +6,10 @@ public class TCounterUI : MonoBehaviour
     public TextMeshProUGUI tCounterText; // Reference to the Text component
     private int tCount = 0;
 
-    void Start()
-    {
-        UpdateCounterText();
-    }
-
+  
     public void CollectT()
     {
-        tCount++;
+       
         UpdateCounterText();
     }
 

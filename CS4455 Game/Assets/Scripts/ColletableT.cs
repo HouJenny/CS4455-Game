@@ -15,7 +15,8 @@ public class ColletableT : MonoBehaviour
         if (c.CompareTag("Player"))
         {
 
-            GameManager.Instance.AddCollectible();
+            GameManager.Instance.UpdateCollectiblesUI();
+            Debug.Log("hit T");
             // 销毁当前的 T
             Destroy(gameObject);
         }
