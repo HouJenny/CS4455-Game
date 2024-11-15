@@ -118,7 +118,7 @@ public class CharacterInputController : MonoBehaviour {
 
         Jump = Input.GetButtonDown("Jump");
 
-        Attack = Input.GetKeyDown(KeyCode.Space);
+        Attack = Input.GetKeyDown(KeyCode.Z);
 
 	}
 }
