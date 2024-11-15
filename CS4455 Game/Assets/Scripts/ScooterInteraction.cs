@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro; 
+using UnityEngine.SceneManagement;
 
 public class ScooterInteraction : MonoBehaviour
 {
@@ -17,7 +19,9 @@ public class ScooterInteraction : MonoBehaviour
     // Battery system
     public float maxBattery = 100f;
     public float currentBattery;
-    public float batteryDrainRate = 10f; // Battery drain per second when scooter is active
+    public float batteryDrainRate = 0.2f; // Battery drain per second when scooter is active
+
+    public TextMeshProUGUI batteryText; 
 
     void Start()
     {
@@ -27,6 +31,7 @@ public class ScooterInteraction : MonoBehaviour
         
         catAnimator = cat.GetComponent<Animator>();
         currentBattery = maxBattery;
+        batteryText.gameObject.SetActive(true); 
     }
 
     void OnTriggerEnter(Collider other)
@@ -113,11 +118,19 @@ public class ScooterInteraction : MonoBehaviour
 
     private void DrainBattery()
     {
+
         if (currentBattery > 0)
         {
             currentBattery -= batteryDrainRate * Time.deltaTime;
             currentBattery = Mathf.Clamp(currentBattery, 0, maxBattery);
+            UpdateBatteryDisplay();
         }
+    }
+
+    void UpdateBatteryDisplay()
+    {
+        int displayBattery = Mathf.CeilToInt(currentBattery);
+        batteryText.text = "Battery Remaining: " + displayBattery.ToString() + "%";
     }
     
     private void StopCatMovement()
