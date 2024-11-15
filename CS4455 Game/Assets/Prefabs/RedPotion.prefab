@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 3696918080084775796}
   - component: {fileID: 4996533081846896842}
   - component: {fileID: 4093338350231381588}
-  - component: {fileID: 480673130585360760}
+  - component: {fileID: 303065163666217282}
   m_Layer: 0
   m_Name: RedPotion
   m_TagString: Untagged
@@ -322,7 +322,7 @@ Transform:
   m_GameObject: {fileID: 7210761232250016937}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.36, y: 1.19, z: 8.17}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5622292356738223694}
@@ -394,7 +394,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &480673130585360760
+--- !u!114 &303065163666217282
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -403,6 +403,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7210761232250016937}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c1140e8a5f574c42a74cee1f0c1fd2e, type: 3}
+  m_Script: {fileID: 11500000, guid: c181cd0f4e6514305bffbf449e5ddd43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  batteryRechargeAmount: 5
