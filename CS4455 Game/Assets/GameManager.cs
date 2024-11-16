@@ -36,5 +36,13 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("EndMenu");
         }
     }
+
+    public void ResetGame() {
+        collectibleCount = 0;
+        heistCount = 5;
+        collectiblesText.text = $"T's Stolen: {collectibleCount}" +
+            $"         Heists Remaining: {heistCount}";
+        Destroy(gameObject);
+    }
 }
 
