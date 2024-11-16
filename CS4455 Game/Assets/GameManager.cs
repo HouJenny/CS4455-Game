@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro; // Import TextMeshPro namespace.
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,8 +24,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
-
     // Update the UI text element with the latest count.
     public void UpdateCollectiblesUI()
     {
@@ -33,6 +32,9 @@ public class GameManager : MonoBehaviour
         Debug.Log(heistCount);
         collectiblesText.text = $"T's Stolen: {collectibleCount}" +
             $"         Heists Remaining: {heistCount}";
+        if (heistCount == 0) {
+            SceneManager.LoadScene("EndMenu");
+        }
     }
 }
 
