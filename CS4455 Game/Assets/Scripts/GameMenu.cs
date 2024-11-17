@@ -10,6 +10,10 @@ public class GameMenu : MonoBehaviour
         }
         SceneManager.LoadScene("TechGreen");
     }
+    public void Instructions()
+    {
+        SceneManager.LoadScene("Instructions");
+    }
     public void QuitGame()
     {
         Application.Quit();
