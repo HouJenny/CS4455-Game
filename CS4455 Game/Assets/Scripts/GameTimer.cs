@@ -53,6 +53,10 @@ public class GameTimer : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1; 
+
+        if (GameManager.Instance != null) {
+            GameManager.Instance.ResetGame();
+        }
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
     }
 
