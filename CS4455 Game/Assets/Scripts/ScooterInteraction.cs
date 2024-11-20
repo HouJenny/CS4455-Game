@@ -55,6 +55,9 @@ public class ScooterInteraction : MonoBehaviour
         if (isOnScooter)
         {
             DrainBattery();
+            cat.transform.localPosition = new Vector3(-.1f, .2f, 0f);
+            cat.transform.localRotation = Quaternion.Euler(0, 90, 0);
+           
         }
 
         if (Input.GetKeyDown(KeyCode.F))
