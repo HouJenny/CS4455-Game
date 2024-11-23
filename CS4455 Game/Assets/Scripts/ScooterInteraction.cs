@@ -152,4 +152,11 @@ public class ScooterInteraction : MonoBehaviour
             catController.Turn = 0;
         }
     }
+
+    public void RechargeBattery(float amount)
+    {
+        currentBattery += amount;
+        currentBattery = Mathf.Clamp(currentBattery, 0, maxBattery);
+        UpdateBatteryDisplay(); // Update the UI to reflect the new battery level
+    }
 }

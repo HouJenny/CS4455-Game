@@ -2574,7 +2574,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   cat: {fileID: 0}
-  anim: {fileID: 0}
+  anim: {fileID: 5866666021909216657, guid: ce43bc5a1e88447c8acec173e253d0d5, type: 3}
   currWaypoint: 0
   ai_state: 1
   cat_offset: 0
