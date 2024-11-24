@@ -9,9 +9,12 @@ public class BentoBus : MonoBehaviour
     private float currTime;
     private float lastInteraction;
 
+    private AudioSource audioSource;
+
     void Awake() {
         currTime = Time.realtimeSinceStartup;
         lastInteraction = Time.realtimeSinceStartup;
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -53,6 +56,15 @@ public class BentoBus : MonoBehaviour
         if (potionPrefab != null && spawnPoint != null)
         {
             Instantiate(potionPrefab, spawnPoint.position, spawnPoint.rotation);
+            PlaySound();
+        }
+    }
+
+    private void PlaySound()
+    {
+        if (!audioSource.isPlaying) // Ensure it doesn't overlap.
+        {
+            audioSource.Play();
         }
     }
 }

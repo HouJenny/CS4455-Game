@@ -77,7 +77,7 @@ public class NpcAI : MonoBehaviour
         }
     }
 
-        private void PlaySound() {
+    private void PlaySound() {
         if (!audioSource.isPlaying) // Ensure it doesn't overlap.
         {
             audioSource.Play();

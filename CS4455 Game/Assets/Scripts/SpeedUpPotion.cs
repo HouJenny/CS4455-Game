@@ -15,8 +15,7 @@ public class SpeedUpPotion : MonoBehaviour
                 playerControl.ActivateSpeedBoost(speedBoostDuration);
             }
 
-            // 销毁药水
-            Destroy(gameObject);
+
         }
     }
 }
