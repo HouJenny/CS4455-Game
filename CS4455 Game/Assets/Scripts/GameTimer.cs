@@ -39,7 +39,7 @@ public class GameTimer : MonoBehaviour
     {
         
         int displayTime = Mathf.CeilToInt(timer);
-        timerText.text = displayTime.ToString();
+        timerText.text = "Time: " + displayTime.ToString();
     }
 
     void GameOver()

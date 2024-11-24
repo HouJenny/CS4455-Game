@@ -5,6 +5,7 @@ using UnityEngine;
 public class ColletableT : MonoBehaviour
 {
     private TCounterUI tCounter;
+<<<<<<< HEAD
     public AudioClip collectionSound; // Reference to the Audio Clip
     
     private bool hasCollected = false;
@@ -13,6 +14,9 @@ public class ColletableT : MonoBehaviour
     private bool alreadyPlayed = false;
 
 
+=======
+    private bool hasCollected = false;
+>>>>>>> parent of 9189c5f... ui and sounds
     void Start()
     {
         // Find the TIconCounterUI script in the scene
@@ -29,8 +33,8 @@ public class ColletableT : MonoBehaviour
             hasCollected = true;
             GameManager.Instance.UpdateCollectiblesUI();
             Debug.Log("hit T");
-            audioSource.Play();
             // 销毁当前的 T
+<<<<<<< HEAD
             if (c.CompareTag("Player"))
             {
                 Debug.Log("Player collected the item!");
@@ -45,6 +49,8 @@ public class ColletableT : MonoBehaviour
                 Destroy(tempAudio, collectionSound.length); // Clean up
             }
 
+=======
+>>>>>>> parent of 9189c5f... ui and sounds
             Destroy(gameObject);
         }
     }

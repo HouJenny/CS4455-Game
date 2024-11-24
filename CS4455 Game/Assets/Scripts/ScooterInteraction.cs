@@ -130,7 +130,7 @@ public class ScooterInteraction : MonoBehaviour
     void UpdateBatteryDisplay()
     {
         int displayBattery = Mathf.CeilToInt(currentBattery);
-        batteryText.text = displayBattery.ToString() + "%";
+        batteryText.text = "Battery Remaining: " + displayBattery.ToString() + "%";
     }
 
     private void StopCatMovement()
