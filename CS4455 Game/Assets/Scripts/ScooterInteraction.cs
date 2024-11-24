@@ -57,7 +57,7 @@ public class ScooterInteraction : MonoBehaviour
         if (isOnScooter)
         {
             DrainBattery();
-            cat.transform.localPosition = new Vector3(-.1f, .2f, 0f);
+            cat.transform.localPosition = new Vector3(0f, .2f, 0f);
             cat.transform.localRotation = Quaternion.Euler(0, 90, 0);
         }
 
@@ -85,10 +85,12 @@ public class ScooterInteraction : MonoBehaviour
         rootMotionControl.enabled = false;
         isOnScooter = true;
 
+        catAnimator.SetBool("isOnScooter", isOnScooter);
+
         StopCatMovement();
 
         cat.transform.SetParent(scooter.transform);
-        cat.transform.localPosition = new Vector3(-.1f, .2f, 0f);
+        cat.transform.localPosition = new Vector3(0f, .2f, 0f);
         cat.transform.localRotation = Quaternion.Euler(0, 90, 0);
 
         Rigidbody catRigidbody = cat.GetComponent<Rigidbody>();
@@ -103,6 +105,8 @@ public class ScooterInteraction : MonoBehaviour
         scooterController.enabled = false;
         rootMotionControl.enabled = true;
         isOnScooter = false;
+
+        catAnimator.SetBool("isOnScooter", isOnScooter);
 
         cat.transform.SetParent(null);
 
@@ -165,7 +169,7 @@ public class ScooterInteraction : MonoBehaviour
         // Ensure the cat maintains its position relative to the scooter
         if (isOnScooter)
         {
-            cat.transform.localPosition = new Vector3(-.1f, .2f, 0f);
+            cat.transform.localPosition = new Vector3(0f, .2f, 0f);
             cat.transform.localRotation = Quaternion.Euler(0, 90, 0);
         }
     }
