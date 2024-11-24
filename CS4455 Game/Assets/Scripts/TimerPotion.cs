@@ -4,10 +4,11 @@ public class TimerPotion : MonoBehaviour
 {
     public float timeToAdd = 30f; 
 
+    private bool hasCollected = false;
     private void OnTriggerEnter(Collider other)
     {
         
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !hasCollected)
         {
             
             GameTimer gameTimer = FindObjectOfType<GameTimer>();
@@ -15,8 +16,7 @@ public class TimerPotion : MonoBehaviour
             {
                 gameTimer.AddTime(timeToAdd); 
             }
-
-            Destroy(gameObject); 
+            hasCollected = true;
         }
     }
 }

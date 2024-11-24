@@ -1417,6 +1417,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6317837473112985250, guid: 8f07fe4173ce54e128708654f5d4ca7c,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 5866666021909216657, guid: b9c94b5eccf6a3a44bc4d5ceae58778f,
+        type: 3}
+    - target: {fileID: 6317837473112985250, guid: 8f07fe4173ce54e128708654f5d4ca7c,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 3511038227907087830}
+    - target: {fileID: 6317837473112985250, guid: 8f07fe4173ce54e128708654f5d4ca7c,
+        type: 3}
+      propertyPath: catController
+      value: 
+      objectReference: {fileID: 4357478361458880665}
+    - target: {fileID: 6317837473112985250, guid: 8f07fe4173ce54e128708654f5d4ca7c,
+        type: 3}
+      propertyPath: screenFadeImage
+      value: 
+      objectReference: {fileID: 962395025}
     - target: {fileID: 6910566454803278061, guid: 8f07fe4173ce54e128708654f5d4ca7c,
         type: 3}
       propertyPath: m_Name
@@ -3031,6 +3052,7 @@ RectTransform:
   - {fileID: 629171102}
   - {fileID: 375858937}
   - {fileID: 1601715091}
+  - {fileID: 962395027}
   m_Father: {fileID: 0}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4635,6 +4657,27 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1992666303}
     m_Modifications:
+    - target: {fileID: 418298216056488405, guid: 9117504f3fed5409e8bc5589427741cc,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 5866666021909216657, guid: b9c94b5eccf6a3a44bc4d5ceae58778f,
+        type: 3}
+    - target: {fileID: 418298216056488405, guid: 9117504f3fed5409e8bc5589427741cc,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 3511038227907087830}
+    - target: {fileID: 418298216056488405, guid: 9117504f3fed5409e8bc5589427741cc,
+        type: 3}
+      propertyPath: catController
+      value: 
+      objectReference: {fileID: 4357478361458880665}
+    - target: {fileID: 418298216056488405, guid: 9117504f3fed5409e8bc5589427741cc,
+        type: 3}
+      propertyPath: screenFadeImage
+      value: 
+      objectReference: {fileID: 962395025}
     - target: {fileID: 3041715041676309901, guid: 9117504f3fed5409e8bc5589427741cc,
         type: 3}
       propertyPath: m_RootOrder
@@ -6429,6 +6472,11 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[2]
       value: 
       objectReference: {fileID: 1798262639}
+    - target: {fileID: 5991522818759251933, guid: 8f07fe4173ce54e128708654f5d4ca7c,
+        type: 3}
+      propertyPath: waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 938731077}
     - target: {fileID: 6101413494877844055, guid: 8f07fe4173ce54e128708654f5d4ca7c,
         type: 3}
       propertyPath: m_RootOrder
@@ -6484,6 +6532,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6317837473112985250, guid: 8f07fe4173ce54e128708654f5d4ca7c,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 5866666021909216657, guid: b9c94b5eccf6a3a44bc4d5ceae58778f,
+        type: 3}
+    - target: {fileID: 6317837473112985250, guid: 8f07fe4173ce54e128708654f5d4ca7c,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 3511038227907087830}
+    - target: {fileID: 6317837473112985250, guid: 8f07fe4173ce54e128708654f5d4ca7c,
+        type: 3}
+      propertyPath: catController
+      value: 
+      objectReference: {fileID: 4357478361458880665}
+    - target: {fileID: 6317837473112985250, guid: 8f07fe4173ce54e128708654f5d4ca7c,
+        type: 3}
+      propertyPath: screenFadeImage
+      value: 
+      objectReference: {fileID: 962395025}
     - target: {fileID: 6910566454803278061, guid: 8f07fe4173ce54e128708654f5d4ca7c,
         type: 3}
       propertyPath: m_Name
@@ -6510,6 +6579,27 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1992666303}
     m_Modifications:
+    - target: {fileID: 418298216056488405, guid: 9117504f3fed5409e8bc5589427741cc,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 5866666021909216657, guid: b9c94b5eccf6a3a44bc4d5ceae58778f,
+        type: 3}
+    - target: {fileID: 418298216056488405, guid: 9117504f3fed5409e8bc5589427741cc,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 3511038227907087830}
+    - target: {fileID: 418298216056488405, guid: 9117504f3fed5409e8bc5589427741cc,
+        type: 3}
+      propertyPath: catController
+      value: 
+      objectReference: {fileID: 4357478361458880665}
+    - target: {fileID: 418298216056488405, guid: 9117504f3fed5409e8bc5589427741cc,
+        type: 3}
+      propertyPath: screenFadeImage
+      value: 
+      objectReference: {fileID: 962395025}
     - target: {fileID: 3041715041676309901, guid: 9117504f3fed5409e8bc5589427741cc,
         type: 3}
       propertyPath: m_RootOrder
@@ -7094,11 +7184,21 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.040527344
       objectReference: {fileID: 0}
+    - target: {fileID: -9008750723780936699, guid: ac29cf73cd3344b709a0464a8a0e460f,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1369423814532009018, guid: ac29cf73cd3344b709a0464a8a0e460f,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6bed124945f8342be9af74387ea5e9e4, type: 2}
+    - target: {fileID: 1384048871792531392, guid: ac29cf73cd3344b709a0464a8a0e460f,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1384048871792531394, guid: ac29cf73cd3344b709a0464a8a0e460f,
         type: 3}
       propertyPath: cat
@@ -7226,9 +7326,19 @@ PrefabInstance:
       objectReference: {fileID: 3511038227907087830}
     - target: {fileID: 6396305783736979506, guid: ac29cf73cd3344b709a0464a8a0e460f,
         type: 3}
+      propertyPath: gameTimer
+      value: 
+      objectReference: {fileID: 262976659}
+    - target: {fileID: 6396305783736979506, guid: ac29cf73cd3344b709a0464a8a0e460f,
+        type: 3}
       propertyPath: catController
       value: 
       objectReference: {fileID: 4357478361458880665}
+    - target: {fileID: 6396305783736979506, guid: ac29cf73cd3344b709a0464a8a0e460f,
+        type: 3}
+      propertyPath: screenFadeImage
+      value: 
+      objectReference: {fileID: 962395025}
     - target: {fileID: 8107282039274645903, guid: ac29cf73cd3344b709a0464a8a0e460f,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -7916,6 +8026,27 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1992666303}
     m_Modifications:
+    - target: {fileID: 418298216056488405, guid: 9117504f3fed5409e8bc5589427741cc,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 5866666021909216657, guid: b9c94b5eccf6a3a44bc4d5ceae58778f,
+        type: 3}
+    - target: {fileID: 418298216056488405, guid: 9117504f3fed5409e8bc5589427741cc,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 3511038227907087830}
+    - target: {fileID: 418298216056488405, guid: 9117504f3fed5409e8bc5589427741cc,
+        type: 3}
+      propertyPath: catController
+      value: 
+      objectReference: {fileID: 4357478361458880665}
+    - target: {fileID: 418298216056488405, guid: 9117504f3fed5409e8bc5589427741cc,
+        type: 3}
+      propertyPath: screenFadeImage
+      value: 
+      objectReference: {fileID: 962395025}
     - target: {fileID: 3041715041676309901, guid: 9117504f3fed5409e8bc5589427741cc,
         type: 3}
       propertyPath: m_RootOrder
@@ -8874,6 +9005,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1992666303}
     m_Modifications:
+    - target: {fileID: -2495790232915731477, guid: 84ef5838db55e486b9eece708887afe9,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 3511038227907087830}
+    - target: {fileID: -2495790232915731477, guid: 84ef5838db55e486b9eece708887afe9,
+        type: 3}
+      propertyPath: catController
+      value: 
+      objectReference: {fileID: 4357478361458880665}
+    - target: {fileID: -2495790232915731477, guid: 84ef5838db55e486b9eece708887afe9,
+        type: 3}
+      propertyPath: screenFadeImage
+      value: 
+      objectReference: {fileID: 962395025}
     - target: {fileID: 7004771244462297189, guid: 84ef5838db55e486b9eece708887afe9,
         type: 3}
       propertyPath: m_Name
@@ -9501,6 +9647,82 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 3067695101538057713, guid: 6db85707dd6494ff7bb7c4eff4378998, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6db85707dd6494ff7bb7c4eff4378998, type: 3}
+--- !u!1 &962395024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 962395027}
+  - component: {fileID: 962395026}
+  - component: {fileID: 962395025}
+  m_Layer: 5
+  m_Name: Cutscene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &962395025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962395024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &962395026
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962395024}
+  m_CullTransparentMesh: 1
+--- !u!224 &962395027
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962395024}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 262976657}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -62.4715, y: 27.0388}
+  m_SizeDelta: {x: 1788.331, y: 1083.1401}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &983980444
 GameObject:
   m_ObjectHideFlags: 0
@@ -14486,6 +14708,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1992666303}
     m_Modifications:
+    - target: {fileID: -2495790232915731477, guid: 84ef5838db55e486b9eece708887afe9,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 3511038227907087830}
+    - target: {fileID: -2495790232915731477, guid: 84ef5838db55e486b9eece708887afe9,
+        type: 3}
+      propertyPath: catController
+      value: 
+      objectReference: {fileID: 4357478361458880665}
+    - target: {fileID: -2495790232915731477, guid: 84ef5838db55e486b9eece708887afe9,
+        type: 3}
+      propertyPath: screenFadeImage
+      value: 
+      objectReference: {fileID: 962395025}
     - target: {fileID: 7004771244462297189, guid: 84ef5838db55e486b9eece708887afe9,
         type: 3}
       propertyPath: m_Name
@@ -19316,6 +19553,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kidnapped
       objectReference: {fileID: 0}
+    - target: {fileID: 1172492172925744877, guid: 8291c10dc63e54178ac0592c9ac1500b,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1172492172925744877, guid: 8291c10dc63e54178ac0592c9ac1500b,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1172492172925744877, guid: 8291c10dc63e54178ac0592c9ac1500b,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1172492172925744877, guid: 8291c10dc63e54178ac0592c9ac1500b,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8291c10dc63e54178ac0592c9ac1500b, type: 3}
 --- !u!4 &1804750652026646926 stripped
@@ -19522,6 +19779,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6317837473112985250, guid: 8f07fe4173ce54e128708654f5d4ca7c,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 5866666021909216657, guid: b9c94b5eccf6a3a44bc4d5ceae58778f,
+        type: 3}
+    - target: {fileID: 6317837473112985250, guid: 8f07fe4173ce54e128708654f5d4ca7c,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 3511038227907087830}
+    - target: {fileID: 6317837473112985250, guid: 8f07fe4173ce54e128708654f5d4ca7c,
+        type: 3}
+      propertyPath: catController
+      value: 
+      objectReference: {fileID: 4357478361458880665}
+    - target: {fileID: 6317837473112985250, guid: 8f07fe4173ce54e128708654f5d4ca7c,
+        type: 3}
+      propertyPath: screenFadeImage
+      value: 
+      objectReference: {fileID: 962395025}
     - target: {fileID: 6910566454803278061, guid: 8f07fe4173ce54e128708654f5d4ca7c,
         type: 3}
       propertyPath: m_Name
@@ -19611,6 +19889,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1992666303}
     m_Modifications:
+    - target: {fileID: -2495790232915731477, guid: 84ef5838db55e486b9eece708887afe9,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 3511038227907087830}
+    - target: {fileID: -2495790232915731477, guid: 84ef5838db55e486b9eece708887afe9,
+        type: 3}
+      propertyPath: catController
+      value: 
+      objectReference: {fileID: 4357478361458880665}
+    - target: {fileID: -2495790232915731477, guid: 84ef5838db55e486b9eece708887afe9,
+        type: 3}
+      propertyPath: screenFadeImage
+      value: 
+      objectReference: {fileID: 962395025}
     - target: {fileID: 6552930606736385760, guid: 84ef5838db55e486b9eece708887afe9,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

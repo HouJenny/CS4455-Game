@@ -2494,8 +2494,8 @@ GameObject:
   - component: {fileID: 4876843155910112125}
   - component: {fileID: 4653551044043744029}
   - component: {fileID: -4000856513508414128}
-  - component: {fileID: 418298216056488405}
   - component: {fileID: -1763479452801251384}
+  - component: {fileID: 418298216056488405}
   m_Layer: 0
   m_Name: NPC_D
   m_TagString: Untagged
@@ -2699,6 +2699,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!136 &-1763479452801251384
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8725132116086262502}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &418298216056488405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2716,20 +2730,6 @@ MonoBehaviour:
   player: {fileID: 0}
   screenFadeImage: {fileID: 0}
   teleportRange: {x: 10, y: 10}
---- !u!136 &-1763479452801251384
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8725132116086262502}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &9030458541413586180
 GameObject:
   m_ObjectHideFlags: 0

@@ -1857,8 +1857,8 @@ GameObject:
   - component: {fileID: 5991522818759251933}
   - component: {fileID: 5991522818759251932}
   - component: {fileID: -4967705138445149446}
-  - component: {fileID: 6317837473112985250}
   - component: {fileID: -8413566006003517782}
+  - component: {fileID: 6317837473112985250}
   m_Layer: 0
   m_Name: NPC_C
   m_TagString: Untagged
@@ -2062,6 +2062,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!136 &-8413566006003517782
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6910566454803278061}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6317837473112985250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2079,20 +2093,6 @@ MonoBehaviour:
   player: {fileID: 0}
   screenFadeImage: {fileID: 0}
   teleportRange: {x: 10, y: 10}
---- !u!136 &-8413566006003517782
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6910566454803278061}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7027823333993497868
 GameObject:
   m_ObjectHideFlags: 0

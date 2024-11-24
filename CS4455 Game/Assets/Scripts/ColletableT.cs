@@ -10,11 +10,20 @@ public class ColletableT : MonoBehaviour
     public AudioSource audioSource; // Reference to the Audio Source
 
     private bool hasCollected = false;
+
+    public AudioSource audioSource;
+    private bool alreadyPlayed = false;
+
+
     void Start()
     {
         // Find the TIconCounterUI script in the scene
         tCounter = FindObjectOfType<TCounterUI>();
+        audioSource = GetComponent<AudioSource>();
+        
     }
+
+
     void OnTriggerEnter(Collider c)
     {
         if (c.CompareTag("Player") && !hasCollected)
@@ -41,4 +50,4 @@ public class ColletableT : MonoBehaviour
         }
     }
     
-}
+
