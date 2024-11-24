@@ -1512,6 +1512,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6317837473112985250, guid: 8f07fe4173ce54e128708654f5d4ca7c,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 5866666021909216657, guid: b9c94b5eccf6a3a44bc4d5ceae58778f,
+        type: 3}
+    - target: {fileID: 6317837473112985250, guid: 8f07fe4173ce54e128708654f5d4ca7c,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 3511038227907087830}
+    - target: {fileID: 6317837473112985250, guid: 8f07fe4173ce54e128708654f5d4ca7c,
+        type: 3}
+      propertyPath: catController
+      value: 
+      objectReference: {fileID: 4357478361458880665}
+    - target: {fileID: 6317837473112985250, guid: 8f07fe4173ce54e128708654f5d4ca7c,
+        type: 3}
+      propertyPath: screenFadeImage
+      value: 
+      objectReference: {fileID: 962395025}
     - target: {fileID: 6910566454803278061, guid: 8f07fe4173ce54e128708654f5d4ca7c,
         type: 3}
       propertyPath: m_Name
@@ -4494,6 +4515,27 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1992666303}
     m_Modifications:
+    - target: {fileID: 418298216056488405, guid: 9117504f3fed5409e8bc5589427741cc,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 5866666021909216657, guid: b9c94b5eccf6a3a44bc4d5ceae58778f,
+        type: 3}
+    - target: {fileID: 418298216056488405, guid: 9117504f3fed5409e8bc5589427741cc,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 3511038227907087830}
+    - target: {fileID: 418298216056488405, guid: 9117504f3fed5409e8bc5589427741cc,
+        type: 3}
+      propertyPath: catController
+      value: 
+      objectReference: {fileID: 4357478361458880665}
+    - target: {fileID: 418298216056488405, guid: 9117504f3fed5409e8bc5589427741cc,
+        type: 3}
+      propertyPath: screenFadeImage
+      value: 
+      objectReference: {fileID: 962395025}
     - target: {fileID: 3041715041676309901, guid: 9117504f3fed5409e8bc5589427741cc,
         type: 3}
       propertyPath: m_RootOrder
@@ -6398,6 +6440,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6317837473112985250, guid: 8f07fe4173ce54e128708654f5d4ca7c,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 5866666021909216657, guid: b9c94b5eccf6a3a44bc4d5ceae58778f,
+        type: 3}
+    - target: {fileID: 6317837473112985250, guid: 8f07fe4173ce54e128708654f5d4ca7c,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 3511038227907087830}
+    - target: {fileID: 6317837473112985250, guid: 8f07fe4173ce54e128708654f5d4ca7c,
+        type: 3}
+      propertyPath: catController
+      value: 
+      objectReference: {fileID: 4357478361458880665}
+    - target: {fileID: 6317837473112985250, guid: 8f07fe4173ce54e128708654f5d4ca7c,
+        type: 3}
+      propertyPath: screenFadeImage
+      value: 
+      objectReference: {fileID: 962395025}
     - target: {fileID: 6910566454803278061, guid: 8f07fe4173ce54e128708654f5d4ca7c,
         type: 3}
       propertyPath: m_Name
@@ -6424,6 +6487,27 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1992666303}
     m_Modifications:
+    - target: {fileID: 418298216056488405, guid: 9117504f3fed5409e8bc5589427741cc,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 5866666021909216657, guid: b9c94b5eccf6a3a44bc4d5ceae58778f,
+        type: 3}
+    - target: {fileID: 418298216056488405, guid: 9117504f3fed5409e8bc5589427741cc,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 3511038227907087830}
+    - target: {fileID: 418298216056488405, guid: 9117504f3fed5409e8bc5589427741cc,
+        type: 3}
+      propertyPath: catController
+      value: 
+      objectReference: {fileID: 4357478361458880665}
+    - target: {fileID: 418298216056488405, guid: 9117504f3fed5409e8bc5589427741cc,
+        type: 3}
+      propertyPath: screenFadeImage
+      value: 
+      objectReference: {fileID: 962395025}
     - target: {fileID: 3041715041676309901, guid: 9117504f3fed5409e8bc5589427741cc,
         type: 3}
       propertyPath: m_RootOrder
@@ -8033,6 +8117,27 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1992666303}
     m_Modifications:
+    - target: {fileID: 418298216056488405, guid: 9117504f3fed5409e8bc5589427741cc,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 5866666021909216657, guid: b9c94b5eccf6a3a44bc4d5ceae58778f,
+        type: 3}
+    - target: {fileID: 418298216056488405, guid: 9117504f3fed5409e8bc5589427741cc,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 3511038227907087830}
+    - target: {fileID: 418298216056488405, guid: 9117504f3fed5409e8bc5589427741cc,
+        type: 3}
+      propertyPath: catController
+      value: 
+      objectReference: {fileID: 4357478361458880665}
+    - target: {fileID: 418298216056488405, guid: 9117504f3fed5409e8bc5589427741cc,
+        type: 3}
+      propertyPath: screenFadeImage
+      value: 
+      objectReference: {fileID: 962395025}
     - target: {fileID: 3041715041676309901, guid: 9117504f3fed5409e8bc5589427741cc,
         type: 3}
       propertyPath: m_RootOrder
@@ -9011,6 +9116,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1992666303}
     m_Modifications:
+    - target: {fileID: -2495790232915731477, guid: 84ef5838db55e486b9eece708887afe9,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 3511038227907087830}
+    - target: {fileID: -2495790232915731477, guid: 84ef5838db55e486b9eece708887afe9,
+        type: 3}
+      propertyPath: catController
+      value: 
+      objectReference: {fileID: 4357478361458880665}
+    - target: {fileID: -2495790232915731477, guid: 84ef5838db55e486b9eece708887afe9,
+        type: 3}
+      propertyPath: screenFadeImage
+      value: 
+      objectReference: {fileID: 962395025}
     - target: {fileID: 7004771244462297189, guid: 84ef5838db55e486b9eece708887afe9,
         type: 3}
       propertyPath: m_Name
@@ -14793,6 +14913,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1992666303}
     m_Modifications:
+    - target: {fileID: -2495790232915731477, guid: 84ef5838db55e486b9eece708887afe9,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 3511038227907087830}
+    - target: {fileID: -2495790232915731477, guid: 84ef5838db55e486b9eece708887afe9,
+        type: 3}
+      propertyPath: catController
+      value: 
+      objectReference: {fileID: 4357478361458880665}
+    - target: {fileID: -2495790232915731477, guid: 84ef5838db55e486b9eece708887afe9,
+        type: 3}
+      propertyPath: screenFadeImage
+      value: 
+      objectReference: {fileID: 962395025}
     - target: {fileID: 7004771244462297189, guid: 84ef5838db55e486b9eece708887afe9,
         type: 3}
       propertyPath: m_Name
@@ -19941,6 +20076,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6317837473112985250, guid: 8f07fe4173ce54e128708654f5d4ca7c,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 5866666021909216657, guid: b9c94b5eccf6a3a44bc4d5ceae58778f,
+        type: 3}
+    - target: {fileID: 6317837473112985250, guid: 8f07fe4173ce54e128708654f5d4ca7c,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 3511038227907087830}
+    - target: {fileID: 6317837473112985250, guid: 8f07fe4173ce54e128708654f5d4ca7c,
+        type: 3}
+      propertyPath: catController
+      value: 
+      objectReference: {fileID: 4357478361458880665}
+    - target: {fileID: 6317837473112985250, guid: 8f07fe4173ce54e128708654f5d4ca7c,
+        type: 3}
+      propertyPath: screenFadeImage
+      value: 
+      objectReference: {fileID: 962395025}
     - target: {fileID: 6910566454803278061, guid: 8f07fe4173ce54e128708654f5d4ca7c,
         type: 3}
       propertyPath: m_Name
@@ -20030,6 +20186,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1992666303}
     m_Modifications:
+    - target: {fileID: -2495790232915731477, guid: 84ef5838db55e486b9eece708887afe9,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 3511038227907087830}
+    - target: {fileID: -2495790232915731477, guid: 84ef5838db55e486b9eece708887afe9,
+        type: 3}
+      propertyPath: catController
+      value: 
+      objectReference: {fileID: 4357478361458880665}
+    - target: {fileID: -2495790232915731477, guid: 84ef5838db55e486b9eece708887afe9,
+        type: 3}
+      propertyPath: screenFadeImage
+      value: 
+      objectReference: {fileID: 962395025}
     - target: {fileID: 6552930606736385760, guid: 84ef5838db55e486b9eece708887afe9,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
