@@ -30,8 +30,8 @@ public class GameManager : MonoBehaviour
         heistCount--; 
         collectibleCount++;
         Debug.Log(heistCount);
-        collectiblesText.text = $"T's Stolen: {collectibleCount}" +
-            $"         Heists Remaining: {heistCount}";
+        collectiblesText.text = $"{collectibleCount}" +
+            $"             {heistCount}";
         if (heistCount == 0) {
             SceneManager.LoadScene("EndMenu");
         }
@@ -40,8 +40,8 @@ public class GameManager : MonoBehaviour
     public void ResetGame() {
         collectibleCount = 0;
         heistCount = 5;
-        collectiblesText.text = $"T's Stolen: {collectibleCount}" +
-            $"         Heists Remaining: {heistCount}";
+        collectiblesText.text = $"{collectibleCount}" +
+            $"             {heistCount}";
         Destroy(gameObject);
     }
 }
