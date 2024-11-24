@@ -6,9 +6,7 @@ public class ColletableT : MonoBehaviour
 {
     private TCounterUI tCounter;
     public AudioClip collectionSound; // Reference to the Audio Clip
-
-    public AudioSource audioSource; // Reference to the Audio Source
-
+    
     private bool hasCollected = false;
 
     public AudioSource audioSource;
@@ -20,7 +18,7 @@ public class ColletableT : MonoBehaviour
         // Find the TIconCounterUI script in the scene
         tCounter = FindObjectOfType<TCounterUI>();
         audioSource = GetComponent<AudioSource>();
-        
+
     }
 
 
@@ -46,8 +44,9 @@ public class ColletableT : MonoBehaviour
 
                 Destroy(tempAudio, collectionSound.length); // Clean up
             }
+
             Destroy(gameObject);
         }
     }
-    
+}
 

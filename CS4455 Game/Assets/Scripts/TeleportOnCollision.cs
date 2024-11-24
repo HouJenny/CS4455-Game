@@ -9,7 +9,7 @@ public class TeleportOnCollision : MonoBehaviour
     public GameObject player;             // Reference to the player object
     public Image screenFadeImage;         // UI Image used for fading
     public Vector2 teleportRange = new Vector2(10f, 10f); // Range for teleportation
-	public GameTimer gameTimer;
+	public ScooterInteraction scooter;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,9 +18,12 @@ public class TeleportOnCollision : MonoBehaviour
 			
             StartCoroutine(FadeAndTeleport());
 
-			if (gameTimer != null)
+			if (scooter != null)
             {
-                gameTimer.DecreaseTime(60f);
+                scooter.currentBattery -= 20;
+				if (scooter.currentBattery < 1) {
+					scooter.currentBattery = 1;
+				}
             }
         }
     }
@@ -38,12 +41,19 @@ public class TeleportOnCollision : MonoBehaviour
         yield return StartCoroutine(FadeScreen(1, 1.0f));
 
         // Teleport the cat to a random position within the range
-        Vector3 newPosition = player.transform.position + new Vector3(
-            Random.Range(-teleportRange.x, teleportRange.x),
-            0, // Maintain the current y-position
-            Random.Range(-teleportRange.y, teleportRange.y)
-        );
-        player.transform.position = newPosition;
+		if (scooter.isOnScooter)
+		{
+    		scooter.TeleportCatAndScooter();
+		}
+		else 
+		{
+        	Vector3 newPosition = player.transform.position + new Vector3(
+            	Random.Range(-teleportRange.x, teleportRange.x),
+            	0, // Maintain the current y-position
+            	Random.Range(-teleportRange.y, teleportRange.y)
+        	);
+        	player.transform.position = newPosition;
+		}
 
 		// Resume the game
         Time.timeScale = 1f;
