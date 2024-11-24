@@ -5,6 +5,7 @@ public class GuideBar : MonoBehaviour
 {
     public GameObject dialogueBox;  // Use for showing UI element
     private bool isPlayerNearby = false;  // Use for checking if the player is near
+    private bool pauseGame = false;
 
     void Start()
     {
@@ -39,6 +40,12 @@ public class GuideBar : MonoBehaviour
         if (isPlayerNearby && Input.GetKeyDown(KeyCode.T))
         {
             // Visualize dialogueBox
+            if (!pauseGame) {
+                Time.timeScale = 0f;
+            } else {
+                Time.timeScale = 1f;
+            }
+            pauseGame = !pauseGame;
             dialogueBox.SetActive(!dialogueBox.activeSelf);
             Debug.Log("T key pressed, showing dialogue");
         }
