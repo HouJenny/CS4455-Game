@@ -12,6 +12,8 @@ public class NpcAI : MonoBehaviour
 
     public Animator anim;
 
+    private AudioSource audioSource;
+
     public int currWaypoint;
 
     public enum AIState {
@@ -28,6 +30,7 @@ public class NpcAI : MonoBehaviour
     {
         nav_mesh_agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         anim = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Start is called before the first frame update
@@ -50,6 +53,8 @@ public class NpcAI : MonoBehaviour
                 // }
                 if (Input.GetKeyDown(KeyCode.Z) && cat_offset <= 5) {
                     ai_state = AIState.Attacked;
+                    PlaySound();
+
                 }
                 if ((nav_mesh_agent.pathPending == false) && (nav_mesh_agent.remainingDistance <= 0.5)) {
                     setNextWaypoint();
@@ -64,9 +69,18 @@ public class NpcAI : MonoBehaviour
             // break;
 
             case AIState.Attacked:
+                
                 nav_mesh_agent.isStopped = true;
+                
                 anim.SetTrigger("FallTrigger");
             break;
+        }
+    }
+
+        private void PlaySound() {
+        if (!audioSource.isPlaying) // Ensure it doesn't overlap.
+        {
+            audioSource.Play();
         }
     }
 
