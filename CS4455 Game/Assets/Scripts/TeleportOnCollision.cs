@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class TeleportOnCollision : MonoBehaviour
 {
     public Animator anim;                 // Animator for the cat
+    public Animator npcAnimator;        // Animator for the NPC
     public RootMotionControlScript catController; // Custom script to control the cat
     public GameObject player;             // Reference to the player object
     public Image screenFadeImage;         // UI Image used for fading
@@ -37,11 +38,18 @@ public class TeleportOnCollision : MonoBehaviour
         catController.catIdle = true;
         anim.SetBool("isForward", false);
 
+        if (npcAnimator != null)
+        {
+            npcAnimator.updateMode = AnimatorUpdateMode.UnscaledTime;
+            npcAnimator.SetBool("isGrabbing", true); // Activate grabbing animation
+            npcAnimator.Play("Grabbing", 0, 0f);
+        }
+
         // Fade to black
-        yield return StartCoroutine(FadeScreen(1, 1.0f));
+        yield return StartCoroutine(FadeScreen(1, 2.0f));
 
         // Teleport the cat to a random position within the range
-		if (scooter.isOnScooter)
+		if (scooter.getIsOnScooter() && scooter)
 		{
     		scooter.TeleportCatAndScooter();
 		}
@@ -66,6 +74,11 @@ public class TeleportOnCollision : MonoBehaviour
         anim.SetBool("isForward", true);
         catController.catIdle = false;
 
+        if (npcAnimator != null)
+        {
+            npcAnimator.updateMode = AnimatorUpdateMode.Normal;
+            npcAnimator.SetBool("isGrabbing", false); // Reset grabbing animation
+        }
         
     }
 
