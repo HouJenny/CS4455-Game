@@ -11,27 +11,29 @@ public class ScooterInteraction : MonoBehaviour
     public ScooterController scooterController;
     public CharacterInputController catController;
     public RootMotionControlScript rootMotionControl; // Reference to RootMotionControlScript
-    
-    private Animator catAnimator;   
+
+    private Animator catAnimator;
     private bool isNearScooter = false;
-    private bool isOnScooter = false;
+    public bool isOnScooter = false;
 
     // Battery system
     public float maxBattery = 100f;
     public float currentBattery;
     public float batteryDrainRate = 0.2f; // Battery drain per second when scooter is active
 
-    public TextMeshProUGUI batteryText; 
+    public TextMeshProUGUI batteryText;
+
+    // Teleportation range
+    public Vector2 teleportRange = new Vector2(10f, 10f);
 
     void Start()
     {
-        // Ensure both controllers are in the correct state at the start
         scooterController.enabled = false;
         rootMotionControl.enabled = true;
-        
+
         catAnimator = cat.GetComponent<Animator>();
         currentBattery = maxBattery;
-        batteryText.gameObject.SetActive(true); 
+        batteryText.gameObject.SetActive(true);
     }
 
     void OnTriggerEnter(Collider other)
@@ -57,12 +59,10 @@ public class ScooterInteraction : MonoBehaviour
             DrainBattery();
             cat.transform.localPosition = new Vector3(-.1f, .2f, 0f);
             cat.transform.localRotation = Quaternion.Euler(0, 90, 0);
-           
         }
 
         if (Input.GetKeyDown(KeyCode.F))
         {
-            // Mount the scooter
             if (isNearScooter && !isOnScooter)
             {
                 MountScooter();
@@ -73,7 +73,6 @@ public class ScooterInteraction : MonoBehaviour
             }
         }
 
-        // Automatically dismount when battery is empty
         if (isOnScooter && currentBattery <= 0)
         {
             DismountScooter();
@@ -83,18 +82,15 @@ public class ScooterInteraction : MonoBehaviour
     private void MountScooter()
     {
         scooterController.enabled = true;
-        rootMotionControl.enabled = false; // Disable root motion control
+        rootMotionControl.enabled = false;
         isOnScooter = true;
-        
-        // Stop the cat's movement and switch to idle animation
+
         StopCatMovement();
 
-        // Parent the cat to the scooter and set position
         cat.transform.SetParent(scooter.transform);
         cat.transform.localPosition = new Vector3(-.1f, .2f, 0f);
         cat.transform.localRotation = Quaternion.Euler(0, 90, 0);
 
-        // Make the cat's Rigidbody kinematic to stop physics interactions
         Rigidbody catRigidbody = cat.GetComponent<Rigidbody>();
         if (catRigidbody != null)
         {
@@ -105,13 +101,11 @@ public class ScooterInteraction : MonoBehaviour
     private void DismountScooter()
     {
         scooterController.enabled = false;
-        rootMotionControl.enabled = true; // Re-enable root motion control
+        rootMotionControl.enabled = true;
         isOnScooter = false;
 
-        // Unparent the cat from the scooter
         cat.transform.SetParent(null);
 
-        // Re-enable physics for the cat's Rigidbody
         Rigidbody catRigidbody = cat.GetComponent<Rigidbody>();
         if (catRigidbody != null)
         {
@@ -121,7 +115,6 @@ public class ScooterInteraction : MonoBehaviour
 
     private void DrainBattery()
     {
-
         if (currentBattery > 0)
         {
             currentBattery -= batteryDrainRate * Time.deltaTime;
@@ -135,17 +128,15 @@ public class ScooterInteraction : MonoBehaviour
         int displayBattery = Mathf.CeilToInt(currentBattery);
         batteryText.text = displayBattery.ToString() + "%";
     }
-    
+
     private void StopCatMovement()
     {
-        // Set Animator parameters to zero to stop the cat's movement
         if (catAnimator != null)
         {
             catAnimator.SetFloat("velx", 0);
             catAnimator.SetFloat("vely", 0);
         }
 
-        // Stop any forward velocity in the CharacterInputController if needed
         if (catController != null)
         {
             catController.Forward = 0;
@@ -157,6 +148,25 @@ public class ScooterInteraction : MonoBehaviour
     {
         currentBattery += amount;
         currentBattery = Mathf.Clamp(currentBattery, 0, maxBattery);
-        UpdateBatteryDisplay(); // Update the UI to reflect the new battery level
+        UpdateBatteryDisplay();
+    }
+
+    public void TeleportCatAndScooter()
+    {
+        Vector3 teleportOffset = new Vector3(
+            Random.Range(-teleportRange.x, teleportRange.x),
+            0, // Keep Y-axis unchanged
+            Random.Range(-teleportRange.y, teleportRange.y)
+        );
+
+        // Teleport both scooter and cat
+        scooter.transform.position += teleportOffset;
+
+        // Ensure the cat maintains its position relative to the scooter
+        if (isOnScooter)
+        {
+            cat.transform.localPosition = new Vector3(-.1f, .2f, 0f);
+            cat.transform.localRotation = Quaternion.Euler(0, 90, 0);
+        }
     }
 }

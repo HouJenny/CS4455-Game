@@ -7326,6 +7326,11 @@ PrefabInstance:
       objectReference: {fileID: 3511038227907087830}
     - target: {fileID: 6396305783736979506, guid: ac29cf73cd3344b709a0464a8a0e460f,
         type: 3}
+      propertyPath: scooter
+      value: 
+      objectReference: {fileID: 1840357862}
+    - target: {fileID: 6396305783736979506, guid: ac29cf73cd3344b709a0464a8a0e460f,
+        type: 3}
       propertyPath: gameTimer
       value: 
       objectReference: {fileID: 262976659}
@@ -17256,6 +17261,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 144162340}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1840357862 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8292065085053371651, guid: d4e922f2696dc0f4b9d3c3040126929c,
+    type: 3}
+  m_PrefabInstance: {fileID: 144162340}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840357859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2739a25d381d194790af4dda46f6e61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1849713860
 GameObject:
   m_ObjectHideFlags: 0
