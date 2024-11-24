@@ -208,8 +208,8 @@ GameObject:
   - component: {fileID: 2957547551055899526}
   - component: {fileID: 128191729723906747}
   - component: {fileID: 8402588076043177425}
-  - component: {fileID: 2484590255336602991}
   - component: {fileID: 8914072569908537157}
+  - component: {fileID: -7644095170951856596}
   m_Layer: 0
   m_Name: GreenPotion
   m_TagString: SpeedPotion
@@ -298,19 +298,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2484590255336602991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2941295397727875436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49332887c64a74d37b63bf9c62e056ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedBoostDuration: 5
 --- !u!114 &8914072569908537157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,6 +310,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c1140e8a5f574c42a74cee1f0c1fd2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-7644095170951856596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2941295397727875436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 080a14d6641d543d3889144724d074a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  batteryRechargeAmount: 2
 --- !u!1 &6257589006339755366
 GameObject:
   m_ObjectHideFlags: 0
