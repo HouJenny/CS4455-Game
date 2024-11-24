@@ -7194,6 +7194,11 @@ PrefabInstance:
       objectReference: {fileID: 3511038227907087830}
     - target: {fileID: 6396305783736979506, guid: ac29cf73cd3344b709a0464a8a0e460f,
         type: 3}
+      propertyPath: gameTimer
+      value: 
+      objectReference: {fileID: 262976659}
+    - target: {fileID: 6396305783736979506, guid: ac29cf73cd3344b709a0464a8a0e460f,
+        type: 3}
       propertyPath: catController
       value: 
       objectReference: {fileID: 4357478361458880665}
