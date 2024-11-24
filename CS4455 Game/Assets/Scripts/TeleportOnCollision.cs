@@ -49,7 +49,7 @@ public class TeleportOnCollision : MonoBehaviour
         yield return StartCoroutine(FadeScreen(1, 2.0f));
 
         // Teleport the cat to a random position within the range
-		if (scooter.getIsOnScooter() && scooter)
+		if (scooter.isOnScooter && scooter)
 		{
     		scooter.TeleportCatAndScooter();
 		}
