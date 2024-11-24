@@ -4,11 +4,37 @@ using UnityEngine;
 
 public class CollectablePowerUp : MonoBehaviour
 {
-    void OnTriggerEnter(Collider c)
+    public AudioSource audioSource;
+    private bool hasCollected = false;
+    private bool alreadyPlayed = false;
+    void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
+        
+    }
+    void OnTriggerEnter(Collider c)
+    {   
+        
         if (c.CompareTag("Player"))
         {
-            Destroy(this.gameObject);
+            hasCollected = true;
+            foreach (MeshRenderer mr in GetComponentsInChildren<MeshRenderer>())
+            {
+            mr.enabled = false;
+            }
+            if (hasCollected & !alreadyPlayed) {
+                Debug.Log("playing sound");
+                PlaySound();
+                alreadyPlayed = true;
+            }
         }
     }
+
+    private void PlaySound() {
+        if (!audioSource.isPlaying) // Ensure it doesn't overlap.
+        {
+            audioSource.Play();
+        }
+    }
+
 }

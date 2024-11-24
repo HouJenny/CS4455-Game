@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BatteryPowerUp : MonoBehaviour
 {
-    public float batteryRechargeAmount = 2f; // Amount of battery to recharge
+    public float batteryRechargeAmount = 20.0f; // Amount of battery to recharge
 
     void OnTriggerEnter(Collider other)
     {
@@ -15,8 +15,6 @@ public class BatteryPowerUp : MonoBehaviour
             Debug.Log("ScooterInteraction found, recharging battery...");
             scooterInteraction.RechargeBattery(batteryRechargeAmount);
 
-            // Destroy 
-            Destroy(gameObject);
         }
     }
 }
