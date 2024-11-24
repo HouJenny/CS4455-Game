@@ -9,6 +9,7 @@ public class TeleportOnCollision : MonoBehaviour
     public GameObject player;             // Reference to the player object
     public Image screenFadeImage;         // UI Image used for fading
     public Vector2 teleportRange = new Vector2(10f, 10f); // Range for teleportation
+	public GameTimer gameTimer;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -16,6 +17,11 @@ public class TeleportOnCollision : MonoBehaviour
         {
 			
             StartCoroutine(FadeAndTeleport());
+
+			if (gameTimer != null)
+            {
+                gameTimer.DecreaseTime(60f);
+            }
         }
     }
 

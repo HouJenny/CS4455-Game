@@ -70,4 +70,8 @@ public class GameTimer : MonoBehaviour
     {
         timer += timeToAdd;
     }
+    public void DecreaseTime(float amount)
+    {
+        timer = Mathf.Max(0, timer - amount / 2); 
+    }
 }
