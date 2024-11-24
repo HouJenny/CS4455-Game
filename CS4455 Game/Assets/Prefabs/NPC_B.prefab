@@ -1939,8 +1939,8 @@ GameObject:
   - component: {fileID: 7923128638030393173}
   - component: {fileID: 7923128638030393172}
   - component: {fileID: 4834918592536930479}
-  - component: {fileID: -413350747646116220}
   - component: {fileID: -2482914044583124555}
+  - component: {fileID: -2495790232915731477}
   m_Layer: 0
   m_Name: NPC_B
   m_TagString: Untagged
@@ -2144,23 +2144,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &-413350747646116220
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7004771244462297189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 502a26bc262a64555b1049c61fb9c746, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 0}
-  catController: {fileID: 0}
-  player: {fileID: 0}
-  screenFadeImage: {fileID: 0}
-  teleportRange: {x: 10, y: 10}
 --- !u!136 &-2482914044583124555
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2175,6 +2158,23 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-2495790232915731477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7004771244462297189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 502a26bc262a64555b1049c61fb9c746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 5866666021909216657, guid: b9c94b5eccf6a3a44bc4d5ceae58778f, type: 3}
+  catController: {fileID: 0}
+  player: {fileID: 0}
+  screenFadeImage: {fileID: 0}
+  teleportRange: {x: 10, y: 10}
 --- !u!1 &7150764023823397629
 GameObject:
   m_ObjectHideFlags: 0
