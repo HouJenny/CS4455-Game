@@ -17,13 +17,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/FinalScene.unity
     guid: 02f640c18e6404fdb8cc2c45f245064a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/May Use Later (Ignore)/Chase.unity
     guid: 32e0c446f1e284a6aba9790690f2eda5
   - enabled: 1
-    path: Assets/Scenes/TechGreen.unity
-    guid: 7b7fa8cf30af241b599764d6a4194a3c
-  - enabled: 1
     path: Assets/Scenes/Instructions.unity
     guid: e03203462f1f3404cba5e219fe24460e
+  - enabled: 1
+    path: Assets/Scenes/TechGreen.unity
+    guid: 7b7fa8cf30af241b599764d6a4194a3c
   m_configObjects: {}
