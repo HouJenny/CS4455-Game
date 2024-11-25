@@ -94,6 +94,9 @@ public class ScooterInteraction : MonoBehaviour
         cat.transform.localRotation = Quaternion.Euler(0, 90, 0);
 
         Rigidbody catRigidbody = cat.GetComponent<Rigidbody>();
+
+        Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Scooter"));
+
         if (catRigidbody != null)
         {
             catRigidbody.isKinematic = true;
@@ -111,6 +114,9 @@ public class ScooterInteraction : MonoBehaviour
         cat.transform.SetParent(null);
 
         Rigidbody catRigidbody = cat.GetComponent<Rigidbody>();
+
+        Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Scooter"), false);
+
         if (catRigidbody != null)
         {
             catRigidbody.isKinematic = false;
