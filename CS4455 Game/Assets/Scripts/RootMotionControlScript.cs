@@ -35,6 +35,10 @@ public class RootMotionControlScript : MonoBehaviour
 
     private float originalTurnSpeed;
 
+    private bool isJumpingToScooter;
+
+    private Vector3 adjustedTargetPosition;
+
     void Awake()
     {
         anim = GetComponent<Animator>();
@@ -167,16 +171,21 @@ public class RootMotionControlScript : MonoBehaviour
         && !anim.IsInTransition(0) && !anim.isMatchingTarget ) 
         {
             if (scooterPressStandingSpot != null) 
-                {
-                    Debug.Log("Target matching correction started"); 
-                    initalMatchTargetsAnimTime = animState.normalizedTime; 
-                    var t = scooterPressStandingSpot.transform; 
-                    anim.MatchTarget(t.position, t.rotation, AvatarTarget.Root,  
-                    new MatchTargetWeightMask(new Vector3(1f, 0f, 1f), 
-                    1f),  
+            {
+                Debug.Log("Target matching correction started"); 
+                initalMatchTargetsAnimTime = animState.normalizedTime; 
+                var t = scooterPressStandingSpot.transform;
+                adjustedTargetPosition = t.position;
+                adjustedTargetPosition.y += 3f; // Add Y offset
+
+                // Trigger MatchTarget with the adjusted position
+                anim.MatchTarget(adjustedTargetPosition, t.rotation, AvatarTarget.Root,  
+                    new MatchTargetWeightMask(new Vector3(1f, 0f, 1f), 1f),  
                     initalMatchTargetsAnimTime, 
                     exitMatchTargetsAnimTime);
-                }
+
+                isJumpingToScooter = true; 
+            }
         }
 
         if (isAttacking)
@@ -193,6 +202,19 @@ public class RootMotionControlScript : MonoBehaviour
         anim.SetBool("matchToScooter", doMatchToScooter);
 
         LimitVelocity();
+    }
+
+    void LateUpdate()
+    {
+        // Ensure the cat's Y position remains higher during the jump
+        if (isJumpingToScooter)
+        {
+            Vector3 currentPosition = transform.position;
+            currentPosition.y = Mathf.Lerp(currentPosition.y, adjustedTargetPosition.y, 0.1f); // Smoothly adjust Y
+            transform.position = currentPosition;
+            isJumpingToScooter = false;
+        }
+        
     }
 
     // activate speed boost
