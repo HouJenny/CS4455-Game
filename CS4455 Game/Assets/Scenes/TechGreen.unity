@@ -8092,10 +8092,6 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 13.839991
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
-    m_RemovedComponents:
-    - {fileID: 6744580208572818601, guid: 2091791de4fbf44cb89f73bea291f464, type: 3}
-=======
     - target: {fileID: 3897229858776353210, guid: 2091791de4fbf44cb89f73bea291f464,
         type: 3}
       propertyPath: m_IsTrigger
@@ -8108,7 +8104,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7733722898147697068, guid: 2091791de4fbf44cb89f73bea291f464, type: 3}
->>>>>>> Stashed changes
   m_SourcePrefab: {fileID: 100100000, guid: 2091791de4fbf44cb89f73bea291f464, type: 3}
 --- !u!1 &260828089
 GameObject:
