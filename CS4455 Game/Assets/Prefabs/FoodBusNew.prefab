@@ -112,7 +112,6 @@ GameObject:
   - component: {fileID: 4151230936249396014}
   - component: {fileID: 3932733603860533183}
   - component: {fileID: 3488404680490976093}
-
   m_Layer: 0
   m_Name: FoodBusNew
   m_TagString: Untagged
