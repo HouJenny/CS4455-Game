@@ -224,8 +224,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbf566948fb9b43699aa1da9c0fa67b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectionSound: {fileID: 8300000, guid: 646ffea2b3ca64314a75ddf32f60c7ff, type: 3}
+  collectionSound: {fileID: 8300000, guid: 26f6911fb51f24d18b1bbf33b20be5e9, type: 3}
   audioSource: {fileID: 9053968980272187299}
+  particleEffectPrefab: {fileID: 87574793628694431, guid: 65271d680c07730448ac5cdd7016eb8a,
+    type: 3}
 --- !u!114 &-2292325337067109212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,7 +253,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 646ffea2b3ca64314a75ddf32f60c7ff, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 26f6911fb51f24d18b1bbf33b20be5e9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
