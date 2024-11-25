@@ -45,6 +45,7 @@ public class TeleportOnCollision : MonoBehaviour
             npcAnimator.Play("Grabbing", 0, 0f);
         }
 
+        yield return new WaitForSecondsRealtime(0.5f);
         // Fade to black
         yield return StartCoroutine(FadeScreen(1, 2.0f));
 
@@ -67,18 +68,18 @@ public class TeleportOnCollision : MonoBehaviour
         Time.timeScale = 1f;
         Time.fixedDeltaTime = 0.02f; // Reset fixedDeltaTime
 
-        // Fade back in
-        yield return StartCoroutine(FadeScreen(0, 1.0f));
-
-        // Re-enable movement for the cat
-        anim.SetBool("isForward", true);
-        catController.catIdle = false;
-
         if (npcAnimator != null)
         {
             npcAnimator.updateMode = AnimatorUpdateMode.Normal;
             npcAnimator.SetBool("isGrabbing", false); // Reset grabbing animation
         }
+
+        // Fade back in
+        yield return StartCoroutine(FadeScreen(0, .2f));
+
+        // Re-enable movement for the cat
+        anim.SetBool("isForward", true);
+        catController.catIdle = false;
         
     }
 
@@ -86,15 +87,16 @@ public class TeleportOnCollision : MonoBehaviour
 	{
     	float startAlpha = screenFadeImage.color.a;
 	    float elapsedTime = 0f;
+        Color originalColor = screenFadeImage.color;
 
     	while (elapsedTime < duration)
     	{
         	elapsedTime += Time.unscaledDeltaTime; // Use unscaled time for the fade
         	float alpha = Mathf.Lerp(startAlpha, targetAlpha, elapsedTime / duration);
-        	screenFadeImage.color = new Color(0, 0, 0, alpha);
+        	screenFadeImage.color = new Color(originalColor.r, originalColor.g, originalColor.b, alpha);
         	yield return null; // Continue on the next frame, even when the game is paused
     	}
 
-    	screenFadeImage.color = new Color(0, 0, 0, targetAlpha);
+    	screenFadeImage.color = new Color(originalColor.r, originalColor.g, originalColor.b, targetAlpha);
 	}
 }
