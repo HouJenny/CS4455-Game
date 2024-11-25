@@ -49,7 +49,7 @@ public class TeleportOnCollision : MonoBehaviour
         yield return StartCoroutine(FadeScreen(1, 2.0f));
 
         // Teleport the cat to a random position within the range
-		if (scooter.isOnScooter && scooter)
+		if (scooter && scooter.isOnScooter)
 		{
     		scooter.TeleportCatAndScooter();
 		}
@@ -69,7 +69,8 @@ public class TeleportOnCollision : MonoBehaviour
 
         // Fade back in
         yield return StartCoroutine(FadeScreen(0, 1.0f));
-
+		
+		Debug.Log("Got here");
         // Re-enable movement for the cat
         anim.SetBool("isForward", true);
         catController.catIdle = false;

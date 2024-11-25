@@ -30,5 +30,6 @@ public class ScooterController : MonoBehaviour
         // Rotate the scooter left/right based on the horizontal input
         transform.Rotate(Vector3.up, moveHorizontal * turnSpeed * Time.deltaTime);
     }
+    
 
 }

@@ -163,14 +163,17 @@ public class ScooterInteraction : MonoBehaviour
             Random.Range(-teleportRange.y, teleportRange.y)
         );
 
-        // Teleport both scooter and cat
-        scooter.transform.position += teleportOffset;
-
-        // Ensure the cat maintains its position relative to the scooter
-        if (isOnScooter)
+		// Reset the scooter's state to ensure it is no longer associated with the cat
+        DismountScooter();
+    
+        // Teleport the cat to a new position, independent of the scooter
+        if (cat != null)
         {
-            cat.transform.localPosition = new Vector3(0f, .2f, 0f);
-            cat.transform.localRotation = Quaternion.Euler(0, 90, 0);
+            cat.transform.position += teleportOffset;
+            cat.transform.SetParent(null); // Detach the cat from the scooter
+            cat.transform.localRotation = Quaternion.identity; // Reset rotation if necessary
         }
+    
+        
     }
 }

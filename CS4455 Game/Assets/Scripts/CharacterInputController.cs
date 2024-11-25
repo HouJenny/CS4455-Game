@@ -54,7 +54,7 @@ public class CharacterInputController : MonoBehaviour {
     {
         buttonPressAudio = GetComponents<AudioSource>()[0];
     }
-	void Update () {
+	void Update() {
 		
         //GetAxisRaw() so we can do filtering here instead of the InputManager
         float h = Input.GetAxisRaw("Horizontal");// setup h variable as our horizontal input axis
