@@ -67,20 +67,20 @@ public class TeleportOnCollision : MonoBehaviour
 		// Resume the game
         Time.timeScale = 1f;
         Time.fixedDeltaTime = 0.02f; // Reset fixedDeltaTime
-
-        // Fade back in
-        yield return StartCoroutine(FadeScreen(0, 1.0f));
-		
-		    Debug.Log("Got here");
-        // Re-enable movement for the cat
-        anim.SetBool("isForward", true);
-        catController.catIdle = false;
-
+        
         if (npcAnimator != null)
         {
             npcAnimator.updateMode = AnimatorUpdateMode.Normal;
             npcAnimator.SetBool("isGrabbing", false); // Reset grabbing animation
         }
+
+        // Fade back in
+        yield return StartCoroutine(FadeScreen(0, 1.0f));
+		
+		Debug.Log("Got here");
+        // Re-enable movement for the cat
+        anim.SetBool("isForward", true);
+        catController.catIdle = false;
 
         // Fade back in
         yield return StartCoroutine(FadeScreen(0, .5f));
