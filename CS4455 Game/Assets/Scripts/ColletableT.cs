@@ -10,6 +10,8 @@ public class ColletableT : MonoBehaviour
     private bool hasCollected = false;
 
     public AudioSource audioSource;
+
+    public GameObject particleEffectPrefab;
     private bool alreadyPlayed = false;
 
 
@@ -18,6 +20,7 @@ public class ColletableT : MonoBehaviour
         // Find the TIconCounterUI script in the scene
         tCounter = FindObjectOfType<TCounterUI>();
         audioSource = GetComponent<AudioSource>();
+
 
     }
 
@@ -34,6 +37,8 @@ public class ColletableT : MonoBehaviour
             if (c.CompareTag("Player"))
             {
                 Debug.Log("Player collected the item!");
+
+                Instantiate(particleEffectPrefab, transform.position, Quaternion.identity);
 
                 // Create a temporary object to play the sound
                 GameObject tempAudio = new GameObject("TempAudio");

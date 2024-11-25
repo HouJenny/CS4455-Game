@@ -65,6 +65,10 @@ public class RootMotionControlScript : MonoBehaviour
 
     }
 
+    void OnCollisionEnter(Collision collision) { 
+        Debug.Log("Collision with: " + collision.gameObject.name); 
+    }
+
     void FixedUpdate()
     {
 
