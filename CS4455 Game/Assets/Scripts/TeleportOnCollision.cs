@@ -76,7 +76,6 @@ public class TeleportOnCollision : MonoBehaviour
         anim.SetBool("isForward", true);
         catController.catIdle = false;
 
-
         if (npcAnimator != null)
         {
             npcAnimator.updateMode = AnimatorUpdateMode.Normal;
@@ -84,7 +83,7 @@ public class TeleportOnCollision : MonoBehaviour
         }
 
         // Fade back in
-        yield return StartCoroutine(FadeScreen(0, .2f));
+        yield return StartCoroutine(FadeScreen(0, .5f));
 
         // Re-enable movement for the cat
         anim.SetBool("isForward", true);
