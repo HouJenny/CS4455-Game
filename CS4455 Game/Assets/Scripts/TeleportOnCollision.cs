@@ -60,7 +60,7 @@ public class TeleportOnCollision : MonoBehaviour
 		{
         	Vector3 newPosition = player.transform.position + new Vector3(
             	Random.Range(-teleportRange.x, teleportRange.x),
-            	0, // Maintain the current y-position
+            	1, // Maintain the current y-position
             	Random.Range(-teleportRange.y, teleportRange.y)
         	);
         	player.transform.position = newPosition;
