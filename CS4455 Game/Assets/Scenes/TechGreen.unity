@@ -4400,7 +4400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da909691549bf469d87104d3e27236bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLimit: 10
+  timeLimit: 240
   timerText: {fileID: 1222528169}
   gameOverPanel: {fileID: 213808046}
   batteryText: {fileID: 1351136670}
