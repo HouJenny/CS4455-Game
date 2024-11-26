@@ -17,7 +17,7 @@ public class TeleportOnCollision : MonoBehaviour
         if (other.CompareTag("Player")) // Ensure it's the cat/player
         {
 			
-            StartCoroutine(FadeAndTeleport());
+            
 
 			if (scooter != null)
             {
@@ -26,6 +26,8 @@ public class TeleportOnCollision : MonoBehaviour
 					scooter.currentBattery = 1;
 				}
             }
+
+            StartCoroutine(FadeAndTeleport());
         }
     }
 

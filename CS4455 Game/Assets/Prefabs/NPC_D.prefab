@@ -2553,7 +2553,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8725132116086262502}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 2.4800487, z: 1}
@@ -2707,7 +2707,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8725132116086262502}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 1
@@ -2726,10 +2726,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
+  npcAnimator: {fileID: 0}
   catController: {fileID: 0}
   player: {fileID: 0}
   screenFadeImage: {fileID: 0}
   teleportRange: {x: 10, y: 10}
+  scooter: {fileID: 0}
 --- !u!1 &9030458541413586180
 GameObject:
   m_ObjectHideFlags: 0
