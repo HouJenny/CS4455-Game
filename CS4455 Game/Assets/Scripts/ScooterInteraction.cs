@@ -30,10 +30,10 @@ public class ScooterInteraction : MonoBehaviour
     {
         scooterController.enabled = false;
         rootMotionControl.enabled = true;
-
         catAnimator = cat.GetComponent<Animator>();
         currentBattery = maxBattery;
         batteryText.gameObject.SetActive(true);
+        DismountScooter();
     }
 
     void OnTriggerEnter(Collider other)

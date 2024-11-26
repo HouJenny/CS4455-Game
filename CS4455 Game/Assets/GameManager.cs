@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro; // Import TextMeshPro namespace.
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -50,11 +51,16 @@ public class GameManager : MonoBehaviour
     }
 
     public void LoadEndMenu()
-
     {
+        StartCoroutine(LoadWinScreenWithDelay());
+    }
 
-        SceneManager.LoadScene("EndMenu"); // Load the main menu scene
-
+    private IEnumerator LoadWinScreenWithDelay()
+    {
+        
+        yield return new WaitForSeconds(.5f); // Wait for the delay duration
+        // Load the win screen scene
+        SceneManager.LoadScene("EndMenu");
     }
 
 }
