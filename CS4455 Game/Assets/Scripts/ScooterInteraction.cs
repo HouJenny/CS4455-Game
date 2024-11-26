@@ -165,7 +165,7 @@ public class ScooterInteraction : MonoBehaviour
     {
         Vector3 teleportOffset = new Vector3(
             Random.Range(-teleportRange.x, teleportRange.x),
-            0, // Keep Y-axis unchanged
+            1, // Keep Y-axis unchanged
             Random.Range(-teleportRange.y, teleportRange.y)
         );
 
