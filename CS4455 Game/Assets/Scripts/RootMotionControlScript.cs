@@ -95,7 +95,7 @@ public class RootMotionControlScript : MonoBehaviour
 		}
 
         // Ground checking (assuming you're using a ground-checking method)
-        bool isGrounded = true; // Replace with actual ground check
+        bool isGrounded = transform.position.y > 0; // Replace with actual ground check
 
         // Apply root motion if grounded
         if (isGrounded)
