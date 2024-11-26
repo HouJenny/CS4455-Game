@@ -18,15 +18,5 @@ public class SpeedUpPotion : MonoBehaviour
 
         }
 
-        if (other.CompareTag("Scooter"))
-        {
-            ScooterController scooterController = other.GetComponentInParent<ScooterController>();
-            if (scooterController != null)
-            {
-                Debug.Log("scooterController found, speeding up!");
-                scooterController.SpeedBoost();
-
-            }
-        }
     }
 }
