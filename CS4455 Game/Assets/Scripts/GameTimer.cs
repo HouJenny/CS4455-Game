@@ -7,7 +7,9 @@ public class GameTimer : MonoBehaviour
     public float timeLimit = 60f; 
     private float timer;
     public TextMeshProUGUI timerText; 
-    public GameObject gameOverPanel; 
+    public GameObject gameOverPanel;
+    public TextMeshProUGUI batteryText;
+    public TextMeshProUGUI counter;
 
     private bool isGameOver = false;
 
@@ -16,7 +18,9 @@ public class GameTimer : MonoBehaviour
         
         timer = timeLimit;
         isGameOver = false;
-        gameOverPanel.SetActive(false); 
+        batteryText.gameObject.SetActive(true);
+        batteryText.enabled = true;
+        counter.enabled = true;
         timerText.gameObject.SetActive(true); 
         Time.timeScale = 1; 
     }
@@ -47,6 +51,9 @@ public class GameTimer : MonoBehaviour
         isGameOver = true;
         timer = 0; 
         gameOverPanel.SetActive(true); // Show "GameOver" Panel
+        batteryText.enabled = false;
+        counter.enabled = false;
+
         timerText.text = "";
         Time.timeScale = 0f;
     }
