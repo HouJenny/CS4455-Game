@@ -15,7 +15,7 @@ public class CollectablePowerUp : MonoBehaviour
     void OnTriggerEnter(Collider c)
     {   
         
-        if (c.CompareTag("Player") && !hasCollected)
+        if (c.CompareTag("Player"))
         {
             hasCollected = true;
             foreach (MeshRenderer mr in GetComponentsInChildren<MeshRenderer>())
