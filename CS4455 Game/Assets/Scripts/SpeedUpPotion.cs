@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class SpeedUpPotion : MonoBehaviour
 {
-    public float speedBoostDuration = 5f;  // 速度增益持续时间
+    public float speedBoostDuration = 5.0f;  // 速度增益持续时间
+
 
     void OnTriggerEnter(Collider other)
     {
@@ -15,7 +16,17 @@ public class SpeedUpPotion : MonoBehaviour
                 playerControl.ActivateSpeedBoost(speedBoostDuration);
             }
 
+        }
 
+        if (other.CompareTag("Scooter"))
+        {
+            ScooterController scooterController = other.GetComponentInParent<ScooterController>();
+            if (scooterController != null)
+            {
+                Debug.Log("scooterController found, speeding up!");
+                scooterController.SpeedBoost();
+
+            }
         }
     }
 }

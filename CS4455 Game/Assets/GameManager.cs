@@ -32,8 +32,12 @@ public class GameManager : MonoBehaviour
         Debug.Log(heistCount);
         collectiblesText.text = $"{collectibleCount}" +
             $"             {heistCount}";
+        
+    }
+
+    public void Update() {
         if (heistCount == 0) {
-            SceneManager.LoadScene("EndMenu");
+            LoadEndMenu();
         }
     }
 
@@ -44,5 +48,14 @@ public class GameManager : MonoBehaviour
             $"             {heistCount}";
         Destroy(gameObject);
     }
+
+    public void LoadEndMenu()
+
+    {
+
+        SceneManager.LoadScene("EndMenu"); // Load the main menu scene
+
+    }
+
 }
 

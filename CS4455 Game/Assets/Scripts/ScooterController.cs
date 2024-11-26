@@ -6,9 +6,13 @@ using UnityEngine.InputSystem;
 
 public class ScooterController : MonoBehaviour
 {
-    public float speed = 10f; // Movement speed
+    public float speed = 5f; // Movement speed
     public float turnSpeed = 100f; // Turning speed
     public Vector3 newCenterOfMass; 
+
+    private float speedBoostTime = 10.0f;
+    private float currTime;
+    private float boostEnd;
 
     private Rigidbody rb;
 
@@ -17,6 +21,11 @@ public class ScooterController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         rb.centerOfMass = newCenterOfMass;
+        
+    }
+    void Awake() {
+        currTime = Time.realtimeSinceStartup;
+        boostEnd = Time.realtimeSinceStartup;
     }
     void Update()
     {
@@ -29,6 +38,16 @@ public class ScooterController : MonoBehaviour
 
         // Rotate the scooter left/right based on the horizontal input
         transform.Rotate(Vector3.up, moveHorizontal * turnSpeed * Time.deltaTime);
+    }
+
+    public void SpeedBoost() {
+        currTime = Time.realtimeSinceStartup;
+        boostEnd = Time.realtimeSinceStartup + speedBoostTime;
+        speed = 8f;
+        while (currTime < boostEnd) {
+            currTime = Time.realtimeSinceStartup;
+        }
+        speed = 5f;
     }
     
 

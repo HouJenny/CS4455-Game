@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class GameTimer : MonoBehaviour
 {
-    public float timeLimit = 60f; 
+    public float timeLimit = 240f; 
     private float timer;
     public TextMeshProUGUI timerText; 
     public GameObject gameOverPanel;

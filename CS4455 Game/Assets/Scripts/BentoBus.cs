@@ -5,7 +5,7 @@ public class BentoBus : MonoBehaviour
     public GameObject potionPrefab; 
     public Transform spawnPoint;    
     private bool playerInRange = false; 
-    private float cooldown = 15.0f;
+    private float cooldown = 10.0f;
     private float currTime;
     private float lastInteraction;
 

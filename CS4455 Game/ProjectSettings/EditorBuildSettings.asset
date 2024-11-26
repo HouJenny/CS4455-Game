@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TechGreen.unity
     guid: 7b7fa8cf30af241b599764d6a4194a3c
+  - enabled: 1
+    path: Assets/Scenes/EndMenu.unity
+    guid: 0676fabc37aadbd4da0a3c6ec03b8601
   m_configObjects: {}
