@@ -14,7 +14,7 @@ public class CollectablePowerUp : MonoBehaviour
     }
     void OnTriggerEnter(Collider c)
     {   
-        
+        //hello
         if (c.CompareTag("Player") && !hasCollected)
         {
             hasCollected = true;
