@@ -36,13 +36,10 @@ public class EagleMotion : MonoBehaviour
     // Method to trigger the eagle's flying animation
     void FlyAway()
     {
-        // Set the 'isFlying' parameter in the animator to true
         eagleAnimator.SetBool("isFlying", true);
 
         eagleAnimator.SetBool("isCatNear", false);
         
-        // Optionally, you can also add movement to make the eagle fly away
-        // Example: Move the eagle upwards or in a random direction
         StartCoroutine(FlyAndLeave());
     }
 
