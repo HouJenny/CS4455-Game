@@ -95,7 +95,7 @@ public class RootMotionControlScript : MonoBehaviour
 		}
 
         // Ground checking (assuming you're using a ground-checking method)
-        bool isGrounded = true; // Replace with actual ground check
+        bool isGrounded = transform.position.y >= 0;
 
         // Apply root motion if grounded
         if (isGrounded)
@@ -106,7 +106,7 @@ public class RootMotionControlScript : MonoBehaviour
             // Interpolate for smooth root movement and rotation
             rootPosition = Vector3.LerpUnclamped(transform.position, rootPosition, rootMovementSpeed);
             rootRotation = Quaternion.LerpUnclamped(transform.rotation, rootRotation, rootTurnSpeed);
-
+			Debug.Log(rootPosition);
             rbody.MovePosition(rootPosition);
             rbody.MoveRotation(rootRotation);
         }
